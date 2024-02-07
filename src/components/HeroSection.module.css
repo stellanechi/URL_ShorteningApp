@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navparent {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navparentbtn {
+  display: flex;
+}

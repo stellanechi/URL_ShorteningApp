@@ -1,12 +1,12 @@
 // import { useState } from "react";
-import LandingPage from "./components/LandingPage";
+import HeroSection from "./components/HeroSection";
 import "./App.css";
 
 function App() {
   return (
     <>
       {" "}
-      <LandingPage />{" "}
+      <HeroSection />{" "}
     </>
   );
 }
