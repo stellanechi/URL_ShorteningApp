@@ -6,12 +6,10 @@ function HeroSection() {
   return (
     <>
       <main>
-        <img src={cube} alt="" />
+        {/* <img src={cube} alt="" /> */}
         <nav>
+          <label htmlFor=""> LINKLY </label>
           <ul className={HeroCSS.navparent}>
-            <li>
-              <a href="#">Linky</a>
-            </li>
             <li className="">
               <a href="#">
                 <button> Login </button>

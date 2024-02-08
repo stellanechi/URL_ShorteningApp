@@ -1,14 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Roboto:wght@300;400&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  background-image: url(../assets/Swirl.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #181e29;
+}
+
+label {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 80px;
+  color: #144ee3;
+}
+
 .navparent {
   display: flex;
   justify-content: flex-end;
-}
-
-.navparentbtn {
-  display: flex;
 }
