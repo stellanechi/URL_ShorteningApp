@@ -10,19 +10,24 @@ function HeroSection() {
         <nav>
           <label htmlFor=""> LINKLY </label>
           <ul className={HeroCSS.navparent}>
-            <li className="">
+            <li className={HeroCSS.login}>
               <a href="#">
                 <button> Login </button>
               </a>
             </li>
-            <li className="">
-              <a href="#">
+            <li className={HeroCSS.signup}>
+              <a href="">
                 <button>Register Now</button>
               </a>
             </li>
           </ul>
         </nav>
       </main>
+      <article>
+        <h1 className={HeroCSS.short}>
+          <strong> Shorten Your Loooong Links :) </strong>
+        </h1>
+      </article>
     </>
   );
 }
