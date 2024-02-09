@@ -34,7 +34,7 @@ label {
   border-radius: 50px;
   color: white;
   font-size: 1rem;
-  width: 120px;
+  width: 140px;
   text-align: center;
 }
 
@@ -56,4 +56,12 @@ label {
   color: #eb568e;
   margin-top: 1em;
   font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.para {
+  color: #ffff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }

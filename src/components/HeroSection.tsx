@@ -1,6 +1,7 @@
 import React from "react";
 import HeroCSS from "./HeroSection.module.css";
 import cube from "../assets/cube.svg";
+import { FiLogOut } from "react-icons/fi";
 
 function HeroSection() {
   return (
@@ -12,7 +13,10 @@ function HeroSection() {
           <ul className={HeroCSS.navparent}>
             <li className={HeroCSS.login}>
               <a href="#">
-                <button> Login </button>
+                <button>
+                  {" "}
+                  Login <FiLogOut />
+                </button>
               </a>
             </li>
             <li className={HeroCSS.signup}>
@@ -27,6 +31,11 @@ function HeroSection() {
         <h1 className={HeroCSS.short}>
           <strong> Shorten Your Loooong Links :) </strong>
         </h1>
+        <span className={HeroCSS.para}>
+          {" "}
+          Linkly is an efficient and easy-to-use URL shortening service that
+          streamlines your <br /> online experience
+        </span>
       </article>
     </>
   );
