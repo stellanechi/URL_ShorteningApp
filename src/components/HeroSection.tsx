@@ -37,6 +37,13 @@ function HeroSection() {
           streamlines your <br /> online experience
         </span>
       </article>
+      <div className={HeroCSS.urlbtn}>
+        <button>
+          {" "}
+          Enter the link here{" "}
+          <button className={HeroCSS.innerbtn}> Shorten now!</button>{" "}
+        </button>
+      </div>
     </>
   );
 }

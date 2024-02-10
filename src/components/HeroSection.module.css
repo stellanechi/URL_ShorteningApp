@@ -64,4 +64,32 @@ label {
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-bottom: 2em;
+}
+
+/* ENTER THE LINK BUTTON */
+.urlbtn {
+  display: flex;
+  justify-content: center;
+  padding: 0.4em;
+  background-color: #353c4a;
+  color: #ffff;
+  border: 1px solid #353c4a;
+  /* text-align: left;
+  background-color: #353c4a;
+  border-radius: 50px;
+  color: white;
+  font-size: 1rem;
+  width: 32%; */
+}
+
+.innerbtn {
+  padding: 0.6em;
+  background-color: #144ee3;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 1rem;
+  width: 145px;
+  text-align: center;
 }
