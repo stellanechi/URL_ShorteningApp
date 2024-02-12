@@ -20,15 +20,27 @@ label {
   font-size: 2.2rem;
   line-height: 80px;
   color: #144ee3;
+  padding: 0 100px;
 }
 
-.navparent {
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  /* line-height: 80px; */
+  margin: 0 5px;
+}
+
+/* .navparent {
   display: flex;
   justify-content: flex-end;
-}
+} */
 
 .login {
-  padding: 0.8em;
+  /* padding: 0.8em; */
   background-color: #353c4a;
   border: 0.2px solid #c9ced6;
   border-radius: 50px;
@@ -39,7 +51,7 @@ label {
 }
 
 .signup {
-  padding: 0.8em;
+  padding: 3px;
   background-color: #144ee3;
   border: none;
   border-radius: 50px;
@@ -74,10 +86,10 @@ label {
   padding: 0.4em;
   background-color: #353c4a;
   color: #ffff;
-  border: 1px solid #353c4a;
+  border: 1px solid #c9ced6;
+  border-radius: 50px;
   /* text-align: left;
   background-color: #353c4a;
-  border-radius: 50px;
   color: white;
   font-size: 1rem;
   width: 32%; */
