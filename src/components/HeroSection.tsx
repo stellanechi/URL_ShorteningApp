@@ -8,17 +8,18 @@ function HeroSection() {
     <>
       <main>
         {/* <img src={cube} alt="" /> */}
-        <nav>
+        <nav className={HeroCSS.navmain}>
           <label htmlFor=""> LINKLY </label>
-          <ul className="">
+          <ul className={HeroCSS.ulmain}>
             <li className={HeroCSS.login}>
               <a href="#">
-                <button>
+                <button className={HeroCSS.loginicon}>
                   {" "}
-                  Login <FiLogOut />
+                  <span> Login </span> <FiLogOut />
                 </button>
               </a>
             </li>
+
             <li className={HeroCSS.signup}>
               <a href="">
                 <button>Register Now</button>
@@ -27,6 +28,7 @@ function HeroSection() {
           </ul>
         </nav>
       </main>
+      {/* ARTICLE SECTION */}
       <article>
         <h1 className={HeroCSS.short}>
           <strong> Shorten Your Loooong Links :) </strong>
@@ -37,6 +39,7 @@ function HeroSection() {
           streamlines your <br /> online experience
         </span>
       </article>
+      {/*  */}
       <div className={HeroCSS.urlbtn}>
         <button>
           {" "}
