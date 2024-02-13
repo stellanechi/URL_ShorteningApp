@@ -1,6 +1,5 @@
-import React from "react";
 import HeroCSS from "./HeroSection.module.css";
-import cube from "../assets/cube.svg";
+// import cube from "../assets/cube.svg";
 import { FiLogOut } from "react-icons/fi";
 
 function HeroSection() {
@@ -40,8 +39,8 @@ function HeroSection() {
         </span>
       </article>
       {/*  */}
-      <div className={HeroCSS.urlbtn}>
-        <button>
+      <div className="flex justify-center items-center">
+        <button className={HeroCSS.urlbtn}>
           {" "}
           Enter the link here{" "}
           <button className={HeroCSS.innerbtn}> Shorten now!</button>{" "}
