@@ -125,3 +125,11 @@ nav ul li {
   width: 145px;
   text-align: center;
 }
+
+/* MEDIA  */
+@media screen and (min-width: 320px) {
+  label {
+    font-size: medium;
+    color: aqua;
+  }
+}
