@@ -133,3 +133,9 @@ nav ul li {
     padding: 0 50px;
   }
 }
+
+@media screen and (min-width: 320px) and (max-width: 414px) {
+  .short {
+    font-size: 1.5rem;
+  }
+}
