@@ -126,8 +126,8 @@ nav ul li {
   text-align: center;
 }
 
-/* MEDIA  */
-@media screen and (min-width: 320px) {
+/* MEDIA MOBILE PORTRAIT */
+@media screen and (min-width: 320px) and (max-width: 414px) {
   label {
     font-size: 1.2rem;
     padding: 0 50px;
