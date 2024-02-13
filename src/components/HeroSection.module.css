@@ -136,6 +136,6 @@ nav ul li {
 
 @media screen and (min-width: 420px) and (max-width: 600px) {
   .short {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 }
