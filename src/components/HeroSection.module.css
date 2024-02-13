@@ -129,8 +129,7 @@ nav ul li {
 /* MEDIA  */
 @media screen and (min-width: 320px) {
   label {
-    font-size: rem;
-    color: aqua;
-    background-color: red;
+    font-size: 1.8rem;
+    padding: 0 50px;
   }
 }
