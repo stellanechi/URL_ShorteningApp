@@ -43,7 +43,7 @@ function HeroSection() {
         <button className={HeroCSS.urlbtn}>
           {" "}
           Enter the link here{" "}
-          <button className={HeroCSS.innerbtn}> Shorten now!</button>{" "}
+          <button className={HeroCSS.innerbtn}> Shorten now </button>{" "}
         </button>
       </div>
     </>
