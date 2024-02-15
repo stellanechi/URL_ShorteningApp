@@ -113,6 +113,8 @@ nav ul li {
   color: #ffff;
   border: 1px solid #c9ced6;
   border-radius: 50px;
+  width: 35vw;
+  text-align: left;
 }
 
 .innerbtn {
@@ -123,7 +125,7 @@ nav ul li {
   color: white;
   font-size: 1rem;
   width: 145px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* MEDIA MOBILE PORTRAIT */
