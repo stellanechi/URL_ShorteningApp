@@ -38,8 +38,8 @@ function HeroSection() {
           streamlines your <br /> online experience
         </span>
       </article>
-      {/*  */}
-      <div className="flex justify-center items-center">
+      {/* SHORTEN LINK SECTION */}
+      <div className="flex justify-center items-center mb-40">
         <button className={HeroCSS.urlbtn}>
           {" "}
           Enter the link here{" "}
