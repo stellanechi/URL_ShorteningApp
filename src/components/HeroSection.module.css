@@ -116,9 +116,19 @@ nav ul li {
   width: 35vw;
   text-align: left;
 }
+.urltext {
+  white-space: nowrap;
+  margin-top: 0.4em;
+}
+
+.urlicon {
+  margin: 2%;
+  margin-top: 0.8em;
+}
 
 .innerbtn {
-  padding: 0.6em;
+  padding: 2%;
+  margin-left: 45%;
   background-color: #144ee3;
   border: none;
   border-radius: 50px;

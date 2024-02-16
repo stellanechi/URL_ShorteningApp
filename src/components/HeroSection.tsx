@@ -1,6 +1,7 @@
 import HeroCSS from "./HeroSection.module.css";
 // import cube from "../assets/cube.svg";
 import { FiLogOut } from "react-icons/fi";
+import { FaLink } from "react-icons/fa";
 
 function HeroSection() {
   return (
@@ -42,7 +43,8 @@ function HeroSection() {
       <div className="flex justify-center items-center mb-40">
         <button className={HeroCSS.urlbtn}>
           {" "}
-          Enter the link here{" "}
+          <FaLink className={HeroCSS.urlicon} />
+          <p className={HeroCSS.urltext}> Enter the link here </p>{" "}
           <button className={HeroCSS.innerbtn}> Shorten now </button>{" "}
         </button>
       </div>
