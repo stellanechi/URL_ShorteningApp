@@ -45,7 +45,7 @@ nav ul li {
 
 .login {
   padding: 0.8em;
-  background-color: #353c4a;
+  background-color: #0a1026;
   border: 0.2px solid #c9ced6;
   border-radius: 50px;
   color: white;
@@ -109,7 +109,7 @@ nav ul li {
   display: flex;
   justify-content: center;
   padding: 0.4em;
-  background-color: #353c4a;
+  background-color: #0a1026;
   color: #ffff;
   border: 1px solid #c9ced6;
   border-radius: 50px;
