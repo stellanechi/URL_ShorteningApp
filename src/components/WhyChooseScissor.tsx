@@ -2,11 +2,13 @@
 
 import { FaLink } from "react-icons/fa";
 import { FaRegPenToSquare } from "react-icons/fa6";
+import { IoQrCodeOutline } from "react-icons/io5";
+import { SiAlwaysdata } from "react-icons/si";
 
 function WhyChooseScissor() {
   return (
     <>
-      <div className="flex w-100 h-32 bg-slate-900 mb-10 text-slate-300 p-5  tracking-tight place-content-around font-semibold">
+      <div className="flex w-100 h-32 bg-slate-900 mb-20 text-slate-300 p-5  tracking-tight place-content-around font-semibold">
         <div>
           {" "}
           <h1 className="text-2xl">
@@ -73,7 +75,7 @@ function WhyChooseScissor() {
           <div className="flex gap-10">
             <div>
               {" "}
-              <FaLink className=" text-slate-500 " />
+              <FaLink className=" text-blue-500 text-xl mb-6 " />
               <h1 className="text-xl mb-4">
                 {" "}
                 <strong> URL Shortening </strong>
@@ -88,7 +90,7 @@ function WhyChooseScissor() {
             {/* CUSTOM URL */}
             <div>
               {" "}
-              <FaRegPenToSquare className=" text-slate-500 " />
+              <FaRegPenToSquare className=" text-blue-500 text-xl mb-6 " />
               <h1 className="text-xl mb-4">
                 {" "}
                 <strong> Custom URLs </strong>
@@ -100,6 +102,36 @@ function WhyChooseScissor() {
                 and businesses.
               </p>
             </div>
+          </div>
+        </div>
+        <div className="flex justify-end text-slate-200 mt-14 gap-10 mr-32">
+          {/* QR CODE */}
+          <div>
+            <IoQrCodeOutline className=" text-blue-500 text-xl  mb-6" />
+            <h1 className="text-xl mb-4">
+              {" "}
+              <strong> QR Codes </strong>
+            </h1>
+            <p>
+              {" "}
+              Generate QR codes to your business, events, <br />
+              bring your audience and customers to your <br />
+              doorstep with this scan and go solution.
+            </p>
+          </div>
+          {/* DATA ANALYTICS */}
+          <div>
+            <SiAlwaysdata className=" text-blue-500 text-xl mb-6 " />
+            <h1 className="text-xl mb-4">
+              {" "}
+              <strong> Data Analytics</strong>
+            </h1>
+            <p>
+              {" "}
+              Recieve data on the usage of either your <br />
+              shortened URL, custom URLs or generated QR <br />
+              codes. Embedded to monitor progress.
+            </p>
           </div>
         </div>
       </article>
