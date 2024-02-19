@@ -42,6 +42,18 @@ function HeroSection() {
         </span>
       </article>
       {/* SHORTEN LINK SECTION */}
+      {/* <form action="">
+        <div className="flex justify-center items-center mb-10">
+          <label htmlFor=""> </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value="Enter the link here"
+            className={HeroCSS.urlbtn}
+          />
+        </div>
+      </form> */}
       <div className="flex justify-center items-center mb-10">
         <button className={HeroCSS.urlbtn}>
           {" "}
@@ -50,21 +62,10 @@ function HeroSection() {
           <button className={HeroCSS.innerbtn}> Shorten now </button>{" "}
         </button>
       </div>
-      {/* <article className="flex justify-center">
-        <div>
-          <p className="text-slate-200">
-            {" "}
-            You can create <span className="text-pink-500"> 05</span> more
-            links. Register now to enjoy unlimited usage.{" "}
-          </p>
-        </div>{" "}
-        <div>
-          <CiCircleQuestion className="text-slate-200" />{" "}
-        </div>
-      </article> */}
+
       {/* TABLE SECTION  TAILWIND CSS STYLING*/}
       <div className="flex justify-center">
-        <table className=" text-slate-200 border-seperate p-8 border-5 border-solid bg-gray-900 mb-10">
+        <table className="rounded-lg overflow-hidden text-slate-200 border-seperate p-8 border-5 border-solid bg-gray-900 mb-10">
           <tr className="">
             <th className=" bg-gray-700 text-left px-8 py-4">Short Link </th>
             <th className=" bg-gray-700 text-left px-8 py-4">Original Link </th>
