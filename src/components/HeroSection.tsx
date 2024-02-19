@@ -3,6 +3,7 @@ import HeroCSS from "./HeroSection.module.css";
 import { FiLogOut } from "react-icons/fi";
 import { FaLink } from "react-icons/fa";
 import { IoQrCodeOutline } from "react-icons/io5";
+import { CiCircleQuestion } from "react-icons/ci";
 
 function HeroSection() {
   return (
@@ -49,6 +50,18 @@ function HeroSection() {
           <button className={HeroCSS.innerbtn}> Shorten now </button>{" "}
         </button>
       </div>
+      {/* <article className="flex justify-center">
+        <div>
+          <p className="text-slate-200">
+            {" "}
+            You can create <span className="text-pink-500"> 05</span> more
+            links. Register now to enjoy unlimited usage.{" "}
+          </p>
+        </div>{" "}
+        <div>
+          <CiCircleQuestion className="text-slate-200" />{" "}
+        </div>
+      </article> */}
       {/* TABLE SECTION  TAILWIND CSS STYLING*/}
       <div className="flex justify-center">
         <table className=" text-slate-200 border-seperate p-8 border-5 border-solid bg-gray-900 mb-10">
