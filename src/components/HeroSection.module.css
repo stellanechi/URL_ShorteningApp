@@ -6,14 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-image: url(../assets/Swirl.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #181e29;
-}
-
 label {
   font-family: "Montserrat";
   font-weight: 700;
@@ -45,7 +37,7 @@ nav ul li {
 
 .login {
   padding: 0.8em;
-  background-color: #0a1026;
+  background-color: #111827;
   border: 0.2px solid #c9ced6;
   border-radius: 50px;
   color: white;
@@ -109,7 +101,7 @@ nav ul li {
   display: flex;
   justify-content: center;
   padding: 0.4em;
-  background-color: #0a1026;
+  background-color: #111827;
   color: #ffff;
   border: 1px solid #c9ced6;
   border-radius: 50px;
