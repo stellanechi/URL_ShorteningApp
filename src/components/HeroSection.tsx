@@ -3,7 +3,7 @@ import HeroCSS from "./HeroSection.module.css";
 import { FiLogOut } from "react-icons/fi";
 import { FaLink } from "react-icons/fa";
 import { IoQrCodeOutline } from "react-icons/io5";
-import { CiCircleQuestion } from "react-icons/ci";
+// import { CiCircleQuestion } from "react-icons/ci";
 
 function HeroSection() {
   return (
@@ -44,7 +44,7 @@ function HeroSection() {
       {/* SHORTEN LINK SECTION */}
       {/* <form action="">
         <div className="flex justify-center items-center mb-10">
-          <label htmlFor=""> </label>
+          <label htmlFor="name"> </label>
           <input
             type="text"
             id="name"
