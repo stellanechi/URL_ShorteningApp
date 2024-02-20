@@ -23,13 +23,14 @@ function HeroSection() {
             </li>
 
             <li className={HeroCSS.signup}>
-              <a href="">
+              <a href="#">
                 <button>Sign up</button>
               </a>
             </li>
           </ul>
         </nav>
       </main>
+      {/* <hr className="text-gray-700 h-6 " /> */}
       {/* ARTICLE SECTION */}
       <article>
         <h1 className={HeroCSS.short}>

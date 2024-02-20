@@ -1,11 +1,9 @@
-// import React from "react";
-
 import { FaLink } from "react-icons/fa";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { IoQrCodeOutline } from "react-icons/io5";
 import { SiAlwaysdata } from "react-icons/si";
 
-function WhyChooseScissor() {
+function About() {
   return (
     <>
       <div className="flex w-100  h-32 bg-gray-900 mb-20 text-slate-300 p-5  tracking-tight place-content-around font-semibold">
@@ -139,4 +137,4 @@ function WhyChooseScissor() {
   );
 }
 
-export default WhyChooseScissor;
+export default About;
