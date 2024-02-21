@@ -24,7 +24,7 @@ function HeroSection() {
 
             <li className={HeroCSS.signup}>
               <a href="#">
-                <button>Sign up</button>
+                <button>Free Sign up</button>
               </a>
             </li>
           </ul>
