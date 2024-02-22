@@ -13,6 +13,21 @@ function HeroSection() {
         <nav className={HeroCSS.navmain}>
           <label htmlFor=""> LINKLY </label>
           <ul className={HeroCSS.ulmain}>
+            <li className="text-slate-200 text-base">
+              <a href="#">
+                <span>About</span>
+              </a>
+            </li>
+            <li className="text-slate-200 text-base">
+              <a href="#">
+                <span>FAQ</span>
+              </a>
+            </li>
+            <li className="text-slate-200 text-base">
+              <a href="#">
+                <span> Pricing </span>
+              </a>
+            </li>
             <li className={HeroCSS.login}>
               <a href="#">
                 <button className={HeroCSS.loginicon}>
