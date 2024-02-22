@@ -13,17 +13,17 @@ function HeroSection() {
         <nav className={HeroCSS.navmain}>
           <label htmlFor=""> LINKLY </label>
           <ul className={HeroCSS.ulmain}>
-            <li className="text-slate-200 text-base">
+            <li className="text-slate-200 text-base font-medium mt-2.5">
               <a href="#">
                 <span>About</span>
               </a>
             </li>
-            <li className="text-slate-200 text-base">
+            <li className="text-slate-200 text-base font-medium mt-2.5">
               <a href="#">
                 <span>FAQ</span>
               </a>
             </li>
-            <li className="text-slate-200 text-base">
+            <li className="text-slate-200 text-base font-medium mt-2.5">
               <a href="#">
                 <span> Pricing </span>
               </a>
