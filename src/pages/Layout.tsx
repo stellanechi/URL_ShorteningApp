@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import HomeCSS from "../components/Home.module.css";
-import { FiLogOut } from "react-icons/fi";
+// import { FiLogOut } from "react-icons/fi";
 
 function Layout() {
   return (
@@ -28,9 +28,9 @@ function Layout() {
           </li>
           <li className={HomeCSS.login}>
             <Link to="/login">
-              <button className={HomeCSS.loginicon}>
+              <button className={`hover:text-slate-400 ${HomeCSS.loginicon}`}>
                 {" "}
-                <span> Login </span> <FiLogOut />
+                <span> Login </span>
               </button>
             </Link>
           </li>
@@ -46,6 +46,7 @@ function Layout() {
         {" "}
         <Outlet />{" "}
       </main>
+      {/* <FiLogOut /> */}
     </>
   );
 }

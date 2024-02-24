@@ -9,7 +9,7 @@ function Home() {
       {/* <img src={cube} alt="" /> */}
       <article>
         <h1 className={HomeCSS.short}>
-          <strong> Shorten Your Loooong Links :) </strong>
+          <strong> Shrtn Your Loooong Links :) </strong>
         </h1>
         <span className={HomeCSS.para}>
           {" "}
@@ -80,6 +80,54 @@ function Home() {
             <td className="text-left px-8 py-4"> 4393</td>
             <td className="text-left px-8 py-4 text-pink-500">inactive </td>
             <td className="text-left px-8 py-4">02-16-2024</td>
+          </tr>
+
+          <tr>
+            <td className="text-left px-8 py-4">
+              https://blog.logrocket.com/building
+            </td>
+            <td className="text-left px-8 py-4">
+              https://blog.logrocket.com/building-tailwind-cs
+            </td>
+            <td className="text-left px-8 py-4">
+              {" "}
+              <IoQrCodeOutline className=" text-slate -200 text-3xl " />
+            </td>
+            <td className="text-left px-8 py-4"> 1313</td>
+            <td className="text-left px-8 py-4 text-emerald-400 ">Active </td>
+            <td className="text-left px-8 py-4">02-19-2024</td>
+          </tr>
+
+          <tr>
+            <td className="text-left px-8 py-4">
+              https://blog.logrocket.com/building
+            </td>
+            <td className="text-left px-8 py-4">
+              https://blog.logrocket.com/building-tailwind-cs
+            </td>
+            <td className="text-left px-8 py-4">
+              {" "}
+              <IoQrCodeOutline className=" text-slate -200 text-3xl " />
+            </td>
+            <td className="text-left px-8 py-4"> 1313</td>
+            <td className="text-left px-8 py-4 text-emerald-400 ">Active </td>
+            <td className="text-left px-8 py-4">02-19-2024</td>
+          </tr>
+
+          <tr>
+            <td className="text-left px-8 py-4">
+              https://blog.logrocket.com/building
+            </td>
+            <td className="text-left px-8 py-4">
+              https://blog.logrocket.com/building-tailwind-cs
+            </td>
+            <td className="text-left px-8 py-4">
+              {" "}
+              <IoQrCodeOutline className=" text-slate -200 text-3xl " />
+            </td>
+            <td className="text-left px-8 py-4"> 1313</td>
+            <td className="text-left px-8 py-4 text-emerald-400 ">Active </td>
+            <td className="text-left px-8 py-4">02-19-2024</td>
           </tr>
         </table>
       </div>
