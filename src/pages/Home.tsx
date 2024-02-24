@@ -1,17 +1,17 @@
 // import cube from "../assets/cube.svg";
 import { FaLink } from "react-icons/fa";
 import { IoQrCodeOutline } from "react-icons/io5";
-import HeroCSS from "../components/Home.module.css";
+import HomeCSS from "../components/Home.module.css";
 
 function Home() {
   return (
     <>
       {/* <img src={cube} alt="" /> */}
       <article>
-        <h1 className={HeroCSS.short}>
+        <h1 className={HomeCSS.short}>
           <strong> Shorten Your Loooong Links :) </strong>
         </h1>
-        <span className={HeroCSS.para}>
+        <span className={HomeCSS.para}>
           {" "}
           Linkly is an efficient and easy-to-use URL shortening service that
           streamlines your <br /> online experience
@@ -26,16 +26,16 @@ function Home() {
             id="name"
             name="name"
             value="Enter the link here"
-            className={HeroCSS.urlbtn}
+            className={HomeCSS.urlbtn}
           />
         </div>
       </form> */}
       <div className="flex justify-center items-center mb-10">
-        <button className={HeroCSS.urlbtn}>
+        <button className={HomeCSS.urlbtn}>
           {" "}
-          <FaLink className={HeroCSS.urlicon} />
-          <p className={HeroCSS.urltext}> Enter the link here </p>{" "}
-          <button className={HeroCSS.innerbtn}> Shorten now </button>{" "}
+          <FaLink className={HomeCSS.urlicon} />
+          <p className={HomeCSS.urltext}> Enter the link here </p>{" "}
+          <button className={HomeCSS.innerbtn}> Shorten now </button>{" "}
         </button>
       </div>
 

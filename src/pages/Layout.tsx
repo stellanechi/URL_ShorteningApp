@@ -1,16 +1,16 @@
 import { Outlet, Link } from "react-router-dom";
-import HeroCSS from "../components/HeroSection.module.css";
+import HomeCSS from "../components/Home.module.css";
 import { FiLogOut } from "react-icons/fi";
 
 function Layout() {
   return (
     <>
-      <nav className={HeroCSS.navmain}>
-        <Link className={HeroCSS.logo} to="/">
+      <nav className={HomeCSS.navmain}>
+        <Link className={HomeCSS.logo} to="/">
           {" "}
           LINKLY{" "}
         </Link>
-        <ul className={HeroCSS.ulmain}>
+        <ul className={HomeCSS.ulmain}>
           <li className="text-slate-200 text-base font-medium mt-3 hover:text-slate-400">
             <Link to="/about">
               <span>About</span>
@@ -26,16 +26,16 @@ function Layout() {
               <span> Pricing </span>
             </Link>
           </li>
-          <li className={HeroCSS.login}>
+          <li className={HomeCSS.login}>
             <Link to="/login">
-              <button className={HeroCSS.loginicon}>
+              <button className={HomeCSS.loginicon}>
                 {" "}
                 <span> Login </span> <FiLogOut />
               </button>
             </Link>
           </li>
 
-          <li className={HeroCSS.signup}>
+          <li className={HomeCSS.signup}>
             <Link to="/signup">
               <button>Free Sign up</button>
             </Link>
