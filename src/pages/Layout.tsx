@@ -46,7 +46,18 @@ function Layout() {
         {" "}
         <Outlet />{" "}
       </main>
-      {/* <FiLogOut /> */}
+      <div className="bg-slate-200">
+        <div>
+          <div>
+            {" "}
+            <h1 className="text-xl"> Linkly </h1>
+          </div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </>
   );
 }
