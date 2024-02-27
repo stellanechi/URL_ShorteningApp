@@ -1,7 +1,12 @@
 // import React from 'react'
 
 import { BsInstagram } from "react-icons/bs";
-import { FaLink, FaLinkedin, FaTwitter } from "react-icons/fa6";
+import {
+  FaLink,
+  FaLinkedin,
+  FaSquareFacebook,
+  FaTwitter,
+} from "react-icons/fa6";
 
 function Footer() {
   return (
@@ -9,17 +14,11 @@ function Footer() {
       <div className="bg-slate-200">
         <div>
           <div>
-            <div className="flex">
-              <div className="mt-3 text-xl">
-                {" "}
-                <FaLink />
-              </div>{" "}
-              <div>
-                <span className="text-3xl font-semibold"> Linkly </span>
-              </div>{" "}
+            <div className="flex font-black mb-5">
+              <span className="text-3xl font-semibold"> Linkly </span>{" "}
             </div>
             {/* END OF LINKLY */}
-            <div>
+            <div className="flex  gap-0.5">
               <span>
                 {" "}
                 <FaTwitter />
@@ -31,7 +30,9 @@ function Footer() {
               <span>
                 <FaLinkedin />
               </span>
-              <span></span>
+              <span>
+                <FaSquareFacebook />
+              </span>
             </div>
           </div>
           <div></div>
@@ -41,7 +42,6 @@ function Footer() {
         </div>
       </div>
     </>
-    // <div> <div> </FaLink> </div> <div> </div></div>
   );
 }
 
