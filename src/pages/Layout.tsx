@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import HomeCSS from "../components/Home.module.css";
+import Footer from "../components/Footer";
 // import { FiLogOut } from "react-icons/fi";
 
 function Layout() {
@@ -46,18 +47,7 @@ function Layout() {
         {" "}
         <Outlet />{" "}
       </main>
-      <div className="bg-slate-200">
-        <div>
-          <div>
-            {" "}
-            <h1 className="text-xl"> Linkly </h1>
-          </div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
+      <Footer />
     </>
   );
 }
