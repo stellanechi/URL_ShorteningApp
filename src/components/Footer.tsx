@@ -13,7 +13,7 @@ function Footer() {
     <>
       <footer>
         <div className="bg-slate-200 ">
-          <div className="flex gap-16 justify-center">
+          <div className="flex gap-20  justify-center">
             <div>
               <div className="flex font-black mb-5">
                 <h1 className="text-3xl font-black"> Linkly </h1>{" "}
@@ -82,6 +82,53 @@ function Footer() {
                   Reviews
                 </p>
               </div>
+            </div>
+          </div>{" "}
+          {/* LAST SECTION */}
+          <div className=" flex gap-16">
+            {/* ONE */}
+            <div>
+              <h1 className="text-xl font-medium mb-4 "> Resources</h1>
+              <p>
+                {" "}
+                Blog <br />
+                Resource Library
+                <br />
+                Developer <br />
+                App Connectors
+                <br />
+                Support <br />
+                Trust Center <br />
+                Browser Extension <br />
+                Mobile App
+              </p>
+            </div>
+            {/* TWO */}
+            <div>
+              <h1 className="text-xl font-medium mb-4 "> Features</h1>
+              <p>
+                {" "}
+                Brand Links <br />
+                Mobile Links
+                <br />
+                Campain <br />
+                Management & Analytics <br />
+                QR Code Generation
+              </p>
+            </div>
+            {/* THREE */}
+            <div>
+              <h1 className="text-xl font-medium mb-4 "> Legal</h1>
+              <p>
+                {" "}
+                Privacy Policy <br />
+                Cookie Policy
+                <br />
+                Terms of Service <br />
+                Acceptable Use Policy
+                <br />
+                Code of Conduct
+              </p>
             </div>
           </div>
         </div>
