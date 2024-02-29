@@ -85,7 +85,7 @@ function Footer() {
             </div>
           </div>{" "}
           {/* LAST SECTION */}
-          <div className=" flex gap-16">
+          <div className=" flex gap-16 justify-center mt-10">
             {/* ONE */}
             <div>
               <h1 className="text-xl font-medium mb-4 "> Resources</h1>
