@@ -13,8 +13,8 @@ function Footer() {
     <>
       <footer>
         <div className="bg-slate-200 ">
-          <div className="flex gap-20  justify-center">
-            <div>
+          <div className="flex gap-20 justify-center ">
+            <div className="mt-10">
               <div className="flex font-black mb-5">
                 <h1 className="text-3xl font-black"> Linkly </h1>{" "}
               </div>
@@ -37,7 +37,7 @@ function Footer() {
               </div>
             </div>
             {/* START OF FLEX ELEMENT */}
-            <div className="flex  gap-16 ">
+            <div className="flex  gap-16 mt-10 ">
               {/* ONE */}
               <div>
                 <h1 className="text-xl font-medium mb-4"> Why Linkly </h1>
@@ -85,8 +85,8 @@ function Footer() {
             </div>
           </div>{" "}
           {/* LAST SECTION */}
-          <div className=" flex gap-16 justify-center mt-10">
-            {/* ONE */}
+          {/* <div className=" flex gap-16 mt-10">
+            ONE
             <div>
               <h1 className="text-xl font-medium mb-4 "> Resources</h1>
               <p>
@@ -103,7 +103,7 @@ function Footer() {
                 Mobile App
               </p>
             </div>
-            {/* TWO */}
+            TWO
             <div>
               <h1 className="text-xl font-medium mb-4 "> Features</h1>
               <p>
@@ -116,7 +116,7 @@ function Footer() {
                 QR Code Generation
               </p>
             </div>
-            {/* THREE */}
+            THREE
             <div>
               <h1 className="text-xl font-medium mb-4 "> Legal</h1>
               <p>
@@ -130,7 +130,7 @@ function Footer() {
                 Code of Conduct
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </footer>
     </>
