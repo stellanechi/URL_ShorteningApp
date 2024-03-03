@@ -103,7 +103,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="flex justify-end mt-14 gap-10 mr-32 p-10">
+          <div className="flex justify-end mt-14 gap-10 mr-20  p-10">
             {/* QR CODE */}
             <div>
               <IoQrCodeOutline className=" text-blue-500 text-xl  mb-6" />

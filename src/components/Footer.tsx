@@ -12,11 +12,11 @@ function Footer() {
   return (
     <>
       <footer>
-        <div className="bg-gray-900 text-slate-200 ">
+        <div className="bg-gray-900 text-neutral-500 p-20">
           <div className="flex gap-20 justify-center ">
             <div className="mt-10">
               <div className="flex font-black mb-5">
-                <h1 className="text-3xl font-black"> Linkly </h1>{" "}
+                <h1 className="text-3xl font-black text-slate-200"> Linkly </h1>{" "}
               </div>
               {/* END OF LINKLY */}
               <div className="flex  gap-4">
@@ -40,7 +40,10 @@ function Footer() {
             <div className="flex  gap-16 mt-10 ">
               {/* ONE */}
               <div>
-                <h1 className="text-xl font-medium mb-4"> Why Linkly </h1>
+                <h1 className="text-xl font-medium mb-4 text-slate-200">
+                  {" "}
+                  Why Linkly{" "}
+                </h1>
                 <p>
                   {" "}
                   Integrations & Api <br />
@@ -49,7 +52,10 @@ function Footer() {
               </div>
               {/* TWO */}
               <div>
-                <h1 className="text-xl font-medium mb-4"> Solutions </h1>
+                <h1 className="text-xl font-medium mb-4 text-neutral-500">
+                  {" "}
+                  Solutions{" "}
+                </h1>
                 <p>
                   {" "}
                   Social Media <br />
@@ -82,9 +88,23 @@ function Footer() {
                   Reviews
                 </p>
               </div>
+              {/* FIVE */}
+              <div>
+                <h1 className="text-xl font-medium mb-4 "> Resources</h1>
+                <p>
+                  {" "}
+                  Blog <br />
+                  Resource Library
+                  <br />
+                  Developer <br />
+                  App Connectors
+                  <br />
+                  Support <br />
+                </p>
+              </div>
             </div>
           </div>{" "}
-          <hr className="text-slate-800" />
+          <hr className="border-t-2 border-slate-6200 my-4" />
           {/* LAST SECTION */}
           {/* <div className=" flex gap-16 mt-10">
             ONE
