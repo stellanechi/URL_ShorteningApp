@@ -12,7 +12,7 @@ function Footer() {
   return (
     <>
       <footer>
-        <div className="bg-slate-200 ">
+        <div className="bg-gray-900 text-slate-200 ">
           <div className="flex gap-20 justify-center ">
             <div className="mt-10">
               <div className="flex font-black mb-5">
@@ -84,6 +84,7 @@ function Footer() {
               </div>
             </div>
           </div>{" "}
+          <hr className="text-slate-800" />
           {/* LAST SECTION */}
           {/* <div className=" flex gap-16 mt-10">
             ONE

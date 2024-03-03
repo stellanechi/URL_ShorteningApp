@@ -6,7 +6,7 @@ import { SiAlwaysdata } from "react-icons/si";
 function About() {
   return (
     <>
-      <div className="bg-slate-200 ">
+      <div className="bg-slate-200">
         <div className="flex w-100  h-32 bg-gray-900 mb-20  text-slate-200 p-5  tracking-tight place-content-around font-semibold">
           <div>
             {" "}
@@ -103,7 +103,7 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="flex justify-end mt-14 gap-10 mr-32">
+          <div className="flex justify-end mt-14 gap-10 mr-32 p-10">
             {/* QR CODE */}
             <div>
               <IoQrCodeOutline className=" text-blue-500 text-xl  mb-6" />
