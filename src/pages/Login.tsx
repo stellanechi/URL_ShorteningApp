@@ -6,9 +6,9 @@
 
 const Login = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="bg-white p-20 rounded shadow-md w-2/4">
-        <h2 className="flex justify-center text-3xl font-black mb-6">Login</h2>
+    <div className=" flex items-center justify-center">
+      <div className="bg-white p-20 rounded shadow-md w-2/5">
+        <h2 className="flex justify-center text-3xl font-black mb-6 ">Login</h2>
         <form>
           <div className="mb-4">
             <label htmlFor="username" className="block text-gray-600">
@@ -32,6 +32,7 @@ const Login = () => {
               className="w-full border border-gray-300 p-2 rounded"
             />
           </div>
+
           <button
             type="submit"
             className="flex justify-center bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
