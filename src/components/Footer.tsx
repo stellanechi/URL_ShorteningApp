@@ -19,7 +19,7 @@ function Footer() {
                 <h1 className="text-3xl font-black text-slate-200"> Linkly </h1>{" "}
               </div>
               {/* END OF LINKLY */}
-              <div className="flex  gap-4">
+              <div className="flex text-slate-200  gap-4">
                 <span>
                   {" "}
                   <FaTwitter />
@@ -52,7 +52,7 @@ function Footer() {
               </div>
               {/* TWO */}
               <div>
-                <h1 className="text-xl font-medium mb-4 text-neutral-500">
+                <h1 className="text-xl font-medium mb-4 text-slate-200">
                   {" "}
                   Solutions{" "}
                 </h1>
@@ -66,7 +66,10 @@ function Footer() {
               </div>
               {/* THREE */}
               <div>
-                <h1 className="text-xl font-medium mb-4"> Products </h1>
+                <h1 className="text-xl font-medium mb-4 text-slate-200">
+                  {" "}
+                  Products{" "}
+                </h1>
                 <p>
                   {" "}
                   Link management
@@ -77,7 +80,10 @@ function Footer() {
               </div>
               {/* FOUR */}
               <div>
-                <h1 className="text-xl font-medium mb-4 "> Company</h1>
+                <h1 className="text-xl font-medium mb-4 text-slate-200 ">
+                  {" "}
+                  Company
+                </h1>
                 <p>
                   {" "}
                   About Linkly <br />
@@ -90,7 +96,10 @@ function Footer() {
               </div>
               {/* FIVE */}
               <div>
-                <h1 className="text-xl font-medium mb-4 "> Resources</h1>
+                <h1 className="text-xl font-medium mb-4 text-slate-200 ">
+                  {" "}
+                  Resources
+                </h1>
                 <p>
                   {" "}
                   Blog <br />
@@ -104,7 +113,8 @@ function Footer() {
               </div>
             </div>
           </div>{" "}
-          <hr className="border-t-2 border-slate-6200 my-4" />
+          <hr className="border-neutral-500 border-t-2  my-4 mb-4" />
+          <p> &copy; 2024 Linkly. All right reserved </p>
           {/* LAST SECTION */}
           {/* <div className=" flex gap-16 mt-10">
             ONE
