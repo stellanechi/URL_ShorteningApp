@@ -9,7 +9,7 @@ const Login = () => {
     <div className=" flex items-center justify-center">
       <div className="bg-white p-20 rounded shadow-md w-2/5">
         <h2 className="flex justify-center text-3xl font-black mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
-          Login
+          Welcome Back
         </h2>
         <form>
           <div className="mb-4">
