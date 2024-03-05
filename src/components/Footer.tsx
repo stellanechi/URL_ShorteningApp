@@ -1,12 +1,7 @@
 // import React from 'react'
 
 import { BsInstagram } from "react-icons/bs";
-import {
-  FaLink,
-  FaLinkedin,
-  FaSquareFacebook,
-  FaTwitter,
-} from "react-icons/fa6";
+import { FaLinkedin, FaSquareFacebook, FaTwitter } from "react-icons/fa6";
 
 function Footer() {
   return (
