@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #111827;
+  width: 100%;
+  /* align-items: center; */
+}
+
+.logo {
+  display: block;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 80px;
+  padding: 0 100px;
+  background: linear-gradient(to right, #eb568e, #eb568e, #144ee3, #144ee3);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.navul {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  font-weight: bolder;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.signup {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  padding: 0.8rem;
+  background-color: #144ee3;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  /* width: 120px; */
+  font-weight: 500;
+}

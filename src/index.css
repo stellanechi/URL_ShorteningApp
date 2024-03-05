@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Roboto:wght@300;400&display=swap");
+
 body {
+  min-height: 100vh;
   background-image: url(../src/assets/Swirl.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-color: #181e29;
+  font-family: "Montserrat";
 }

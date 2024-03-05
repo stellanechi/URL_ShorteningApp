@@ -1,17 +1,17 @@
 import { Outlet, Link } from "react-router-dom";
-import HomeCSS from "../components/Home.module.css";
+import LayoutCSS from "../components/Layout.module.css";
 import Footer from "../components/Footer";
 // import { FiLogOut } from "react-icons/fi";
 
 function Layout() {
   return (
     <>
-      <nav className={HomeCSS.navmain}>
-        <Link className={HomeCSS.logo} to="/">
+      <nav className={LayoutCSS.nav}>
+        <Link className={LayoutCSS.logo} to="/">
           {" "}
           LINKLY{" "}
         </Link>
-        <ul className={HomeCSS.ulmain}>
+        <ul className={LayoutCSS.navul}>
           <li className="text-slate-200 text-base font-medium mt-3 hover:text-slate-400">
             <Link to="/about">
               <span>About</span>
@@ -27,22 +27,20 @@ function Layout() {
               <span> Pricing </span>
             </Link>
           </li>
-          <li className={HomeCSS.login}>
+          <li className="text-slate-200 text-base font-medium mt-3 hover:text-slate-400">
             <Link to="/login">
-              <button className={`hover:text-slate-400 ${HomeCSS.loginicon}`}>
-                {" "}
-                <span> Login </span>
-              </button>
+              <span> Login </span>
             </Link>
           </li>
 
-          <li className={HomeCSS.signup}>
+          <li className={LayoutCSS.signup}>
             <Link to="/signup">
               <button>Free Sign up</button>
             </Link>
           </li>
         </ul>
       </nav>
+
       <main className="mt-20">
         {" "}
         <Outlet />{" "}
