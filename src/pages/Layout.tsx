@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { GiHamburgerMenu } from "react-icons/gi";
