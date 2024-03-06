@@ -10,7 +10,7 @@ function Home() {
       {/* <img src={cube} alt="" /> */}
       <article>
         {/* ANIMATION */}
-        <div className="flex items-center justify-center text-3xl sm:text-base  sm:font-medium font-bold mb-4 bg-gradient-to-r from-pink-500 via-indigo-500 to-pink-500 text-transparent bg-clip-text">
+        <div className="flex items-center justify-center text-3xl md:text-base  md:font-medium font-bold mb-4 bg-gradient-to-r from-pink-500 via-indigo-500 to-pink-500 text-transparent bg-clip-text">
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
