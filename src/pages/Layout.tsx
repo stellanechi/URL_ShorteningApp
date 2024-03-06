@@ -18,20 +18,20 @@ function Layout() {
           LINKLY{" "}
         </Link>
         <ul className="hidden md:flex gap-6 text-slate-200">
-          <li>
+          <li className="font-semibold">
             {" "}
             <Link to="/about"> About </Link>{" "}
           </li>
-          <li>
+          <li className="font-semibold">
             <Link to="/faq">FAQ</Link>
           </li>
-          <li>
+          <li className="font-semibold">
             <Link to="/pricing">Pricing</Link>
           </li>
-          <li>
+          <li className="font-semibold">
             <Link to="/login">Login</Link>
           </li>
-          <li>
+          <li className="font-semibold border-none p-3 bg-blue-700 rounded-full">
             <Link to="/signup">Signup</Link>
           </li>
         </ul>
