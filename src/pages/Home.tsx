@@ -2,15 +2,36 @@
 import { FaLink } from "react-icons/fa";
 import { IoQrCodeOutline } from "react-icons/io5";
 import HomeCSS from "../components/Home.module.css";
+import { TypeAnimation } from "react-type-animation";
 
 function Home() {
   return (
     <>
       {/* <img src={cube} alt="" /> */}
       <article>
-        <h1 className={HomeCSS.short}>
+        {/* ANIMATION */}
+        <div className="flex items-center justify-center text-3xl font-bold mb-2 bg-gradient-to-r from-pink-500 via-indigo-500 to-pink-500 text-transparent bg-clip-text">
+          <TypeAnimation
+            sequence={[
+              // Same substring at the start will only be typed out once, initially
+              "Shrtn Your Loooong Links :) ",
+              1000, // wait 1s before replacing "Mice" with "Hamsters"
+              "Optimize your online experience with our ",
+              1000,
+              "Advance url shortening solution",
+              1000,
+            ]}
+            wrapper="span"
+            speed={50}
+            style={{ fontSize: "2em", display: "inline-block" }}
+            repeat={Infinity}
+          />
+        </div>
+
+        {/* END OF ANIMATION */}
+        {/* <h1 className={HomeCSS.short}>
           <strong> Shrtn Your Loooong Links :) </strong>
-        </h1>
+        </h1> */}
         <span className={HomeCSS.para}>
           {" "}
           Linkly is an efficient and easy-to-use URL shortening service that

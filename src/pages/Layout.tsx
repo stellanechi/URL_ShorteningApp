@@ -3,7 +3,6 @@ import { Outlet, Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
-// import { useState } from "react";
 
 function Layout() {
   const [nav, SetNav] = useState(false);
@@ -12,7 +11,7 @@ function Layout() {
     <>
       <nav className="flex justify-between p-5 items-center  bg-gray-900">
         <Link
-          className="text-4xl bg-gradient-to-r from-pink-500 via-indigo-500 to-pink-500 text-transparent bg-clip-text"
+          className="text-4xl font-bold bg-gradient-to-r from-pink-500 via-indigo-500 to-pink-500 text-transparent bg-clip-text"
           to="/"
         >
           {" "}
