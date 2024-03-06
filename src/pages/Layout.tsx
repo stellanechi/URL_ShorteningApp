@@ -31,7 +31,7 @@ function Layout() {
           <li className="font-semibold">
             <Link to="/login">Login</Link>
           </li>
-          <li className="font-semibold border-none p-3 bg-blue-700 rounded-full">
+          <li className="font-semibold border-none p-3 bg-blue-700 rounded-full -mt-3">
             <Link to="/signup">Signup</Link>
           </li>
         </ul>

@@ -29,28 +29,27 @@ function Home() {
         </div>
 
         {/* END OF ANIMATION */}
-        {/* <h1 className={HomeCSS.short}>
-          <strong> Shrtn Your Loooong Links :) </strong>
-        </h1> */}
-        <span className={HomeCSS.para}>
+        <span className=" flex justify-center items-center text-center text-slate-200">
           {" "}
           Linkly is an efficient and easy-to-use URL shortening service that
           streamlines your <br /> online experience
         </span>
       </article>
       {/* SHORTEN LINK SECTION */}
-      {/* <form action="">
-        <div className="flex justify-center items-center mb-10">
-          <label htmlFor="name"> </label>
+      <form action="">
+        <div className="flex justify-center items-center  mb-10">
           <input
+            className="p-4 font-semibold bg-gray-900 text-slate-200 mt-5 w-2/5 rounded-full border-solid border border-slate-200 "
             type="text"
-            id="name"
-            name="name"
-            value="Enter the link here"
-            className={HomeCSS.urlbtn}
-          />
+            id="text"
+            name="text"
+            value="Enter the link here.."
+          ></input>
         </div>
-      </form> */}
+      </form>
+
+      {/* END OF SHORTEN LINK FORM */}
+
       <div className="flex justify-center items-center mb-10">
         <button className={HomeCSS.urlbtn}>
           {" "}
