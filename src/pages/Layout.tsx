@@ -31,7 +31,10 @@ function Layout() {
             <Link to="/signup">Signup</Link>
           </li>
         </ul>
-        <GiHamburgerMenu className="text-slate-200" size={20} />
+        {/* HAMBURGER */}
+        <div className="md:hidden">
+          <GiHamburgerMenu className="text-slate-200" size={25} />
+        </div>
       </nav>
 
       <main className="mt-20">
