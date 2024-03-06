@@ -10,12 +10,11 @@ function Home() {
       <article>
         {/* ANIMATION */}
         {/* md:text-base md:font-medium */}
-        <div className="flex items-center justify-center text-3xl font-bold mb-4 bg-gradient-to-r from-pink-500 via-indigo-500 to-pink-500 text-transparent bg-clip-text">
+        <div className="flex items-center justify-center text-xl text-center md:text-3xl px-5 py-5 font-bold mb-4 bg-gradient-to-r from-pink-500 via-indigo-500 to-pink-500 text-transparent bg-clip-text">
           <TypeAnimation
             sequence={[
-              // Same substring at the start will only be typed out once, initially
               "Shrtn Your Loooong Links :) ",
-              1000, // wait 1s before replacing "Mice" with "Hamsters"
+              1000,
               "Optimize your online experience with our ",
               1000,
               "Advance url shortening solution",
@@ -23,8 +22,9 @@ function Home() {
             ]}
             wrapper="span"
             speed={50}
-            style={{ fontSize: "2em", display: "inline-block" }}
+            style={{ display: "inline-block" }}
             repeat={Infinity}
+            className=""
           />
         </div>
         {/* END OF ANIMATION */}
@@ -35,18 +35,18 @@ function Home() {
         </span>
       </article>
       {/* SHORTEN LINK SECTION */}
-      <form action="">
-        <div className="flex justify-center items-center  mb-10 mt-10">
+      <form className="px-5" action="">
+        <div className="flex justify-center flex-col gap-3 items-center  mb-10 mt-10">
           <label htmlFor=""></label>
           <input
-            className="p-4 font-semibold bg-gray-900 text-slate-200 mt-5 w-2/5 rounded-full border-solid border border-slate-200 "
+            className="px-4 py-2 placeholder:text-sm md:p-4 font-semibold bg-gray-900 text-slate-200 mt-5 w-full md:w-2/5  rounded-full border-solid border border-slate-200 "
             type="text"
             id="text"
             name="text"
             value=""
             placeholder="Enter text here.."
           ></input>{" "}
-          <button className="p-2 bg-blue-600 rounded-full text-slate-200 font-semibold ">
+          <button className="p-2 bg-blue-600 rounded-lg px-5 text-slate-200 font-semibold ">
             {" "}
             <span>Shorten now </span>
           </button>
@@ -65,7 +65,7 @@ function Home() {
       </div> */}
 
       {/* TABLE SECTION  TAILWIND CSS STYLING*/}
-      <div className="flex justify-center">
+      <div className="w-[95%] max-w-5xl mx-auto overflow-x-scroll ">
         <table className="rounded-lg overflow-hidden text-slate-200 border-seperate p-8 border-5 border-solid bg-gray-900 mb-10">
           <tr className="">
             <th className=" bg-gray-700 text-left px-8 py-4">Short Link </th>
@@ -105,38 +105,6 @@ function Home() {
             <td className="text-left px-8 py-4"> 4393</td>
             <td className="text-left px-8 py-4 text-pink-500">inactive </td>
             <td className="text-left px-8 py-4">02-16-2024</td>
-          </tr>
-
-          <tr>
-            <td className="text-left px-8 py-4">
-              https://blog.logrocket.com/building
-            </td>
-            <td className="text-left px-8 py-4">
-              https://blog.logrocket.com/building-tailwind-cs
-            </td>
-            <td className="text-left px-8 py-4">
-              {" "}
-              <IoQrCodeOutline className=" text-slate -200 text-3xl " />
-            </td>
-            <td className="text-left px-8 py-4"> 1313</td>
-            <td className="text-left px-8 py-4 text-emerald-400 ">Active </td>
-            <td className="text-left px-8 py-4">02-19-2024</td>
-          </tr>
-
-          <tr>
-            <td className="text-left px-8 py-4">
-              https://blog.logrocket.com/building
-            </td>
-            <td className="text-left px-8 py-4">
-              https://blog.logrocket.com/building-tailwind-cs
-            </td>
-            <td className="text-left px-8 py-4">
-              {" "}
-              <IoQrCodeOutline className=" text-slate -200 text-3xl " />
-            </td>
-            <td className="text-left px-8 py-4"> 1313</td>
-            <td className="text-left px-8 py-4 text-emerald-400 ">Active </td>
-            <td className="text-left px-8 py-4">02-19-2024</td>
           </tr>
 
           <tr>
