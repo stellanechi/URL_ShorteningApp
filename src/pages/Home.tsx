@@ -1,7 +1,6 @@
 // import cube from "../assets/cube.svg";
 import { FaLink } from "react-icons/fa";
 import { IoQrCodeOutline } from "react-icons/io5";
-import HomeCSS from "../components/Home.module.css";
 import { TypeAnimation } from "react-type-animation";
 
 function Home() {
@@ -10,7 +9,8 @@ function Home() {
       {/* <img src={cube} alt="" /> */}
       <article>
         {/* ANIMATION */}
-        <div className="flex items-center justify-center text-3xl md:text-base  md:font-medium font-bold mb-4 bg-gradient-to-r from-pink-500 via-indigo-500 to-pink-500 text-transparent bg-clip-text">
+        {/* md:text-base md:font-medium */}
+        <div className="flex items-center justify-center text-3xl font-bold mb-4 bg-gradient-to-r from-pink-500 via-indigo-500 to-pink-500 text-transparent bg-clip-text">
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
@@ -27,7 +27,6 @@ function Home() {
             repeat={Infinity}
           />
         </div>
-
         {/* END OF ANIMATION */}
         <span className=" flex justify-center items-center text-center text-slate-200">
           {" "}
@@ -37,27 +36,33 @@ function Home() {
       </article>
       {/* SHORTEN LINK SECTION */}
       <form action="">
-        <div className="flex justify-center items-center  mb-10">
+        <div className="flex justify-center items-center  mb-10 mt-10">
+          <label htmlFor=""></label>
           <input
             className="p-4 font-semibold bg-gray-900 text-slate-200 mt-5 w-2/5 rounded-full border-solid border border-slate-200 "
             type="text"
             id="text"
             name="text"
-            value="Enter the link here.."
-          ></input>
+            value=""
+            placeholder="Enter text here.."
+          ></input>{" "}
+          <button className="p-2 bg-blue-600 rounded-full text-slate-200 font-semibold ">
+            {" "}
+            <span>Shorten now </span>
+          </button>
         </div>
       </form>
 
       {/* END OF SHORTEN LINK FORM */}
 
-      <div className="flex justify-center items-center mb-10">
+      {/* <div className="flex justify-center items-center mb-10">
         <button className={HomeCSS.urlbtn}>
           {" "}
           <FaLink className={HomeCSS.urlicon} />
           <p className={HomeCSS.urltext}> Enter the link here </p>{" "}
           <button className={HomeCSS.innerbtn}> Shorten now </button>{" "}
         </button>
-      </div>
+      </div> */}
 
       {/* TABLE SECTION  TAILWIND CSS STYLING*/}
       <div className="flex justify-center">
