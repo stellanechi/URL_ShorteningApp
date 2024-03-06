@@ -1,5 +1,5 @@
 // import cube from "../assets/cube.svg";
-import { FaLink } from "react-icons/fa";
+// import { FaLink } from "react-icons/fa";
 import { IoQrCodeOutline } from "react-icons/io5";
 import { TypeAnimation } from "react-type-animation";
 
