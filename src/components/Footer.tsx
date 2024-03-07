@@ -8,12 +8,13 @@ function Footer() {
     <>
       <footer>
         <div className="bg-gray-900 text-neutral-500 p-20">
-          <div className="flex flex-col items-center gap-20 ">
+          <div className="flex flex-col md:flex-row justify-center gap-10 md:gap-20 ">
+            {/* md:flex-row md:gap-20 */}
             <div className="mt-10">
               <div className="font-bold mb-5">
                 <h1 className="text-3xl font-black text-slate-200"> Linkly </h1>{" "}
               </div>
-              {/* END OF LINKLY */}
+              {/* START OF ICON */}
               <div className="flex text-slate-200  gap-4">
                 <span>
                   {" "}
@@ -32,7 +33,7 @@ function Footer() {
               </div>
             </div>
             {/* START OF FLEX ELEMENT */}
-            <div className="flex  gap-16 mt-10 ">
+            <div className="flex flex-wrap gap-16 mt-10 ">
               {/* ONE */}
               <div>
                 <h1 className="text-xl font-medium mb-4 text-slate-200">
@@ -110,53 +111,6 @@ function Footer() {
           </div>{" "}
           <hr className="border-neutral-500 border-t-2  my-4 mb-4" />
           <p> &copy; 2024 Linkly. All right reserved </p>
-          {/* LAST SECTION */}
-          {/* <div className=" flex gap-16 mt-10">
-            ONE
-            <div>
-              <h1 className="text-xl font-medium mb-4 "> Resources</h1>
-              <p>
-                {" "}
-                Blog <br />
-                Resource Library
-                <br />
-                Developer <br />
-                App Connectors
-                <br />
-                Support <br />
-                Trust Center <br />
-                Browser Extension <br />
-                Mobile App
-              </p>
-            </div>
-            TWO
-            <div>
-              <h1 className="text-xl font-medium mb-4 "> Features</h1>
-              <p>
-                {" "}
-                Brand Links <br />
-                Mobile Links
-                <br />
-                Campain <br />
-                Management & Analytics <br />
-                QR Code Generation
-              </p>
-            </div>
-            THREE
-            <div>
-              <h1 className="text-xl font-medium mb-4 "> Legal</h1>
-              <p>
-                {" "}
-                Privacy Policy <br />
-                Cookie Policy
-                <br />
-                Terms of Service <br />
-                Acceptable Use Policy
-                <br />
-                Code of Conduct
-              </p>
-            </div>
-          </div> */}
         </div>
       </footer>
     </>
