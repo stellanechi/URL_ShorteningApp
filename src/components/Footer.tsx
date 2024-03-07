@@ -10,7 +10,7 @@ function Footer() {
         <div className="bg-gray-900 text-neutral-500 p-20">
           <div className="flex flex-col md:flex-row justify-center gap-10 md:gap-20 ">
             {/* md:flex-row md:gap-20 */}
-            <div className="mt-10">
+            <div className="hidden mt-10">
               <div className="font-bold mb-5">
                 <h1 className="text-3xl font-black text-slate-200"> Linkly </h1>{" "}
               </div>
@@ -33,7 +33,7 @@ function Footer() {
               </div>
             </div>
             {/* START OF FLEX ELEMENT */}
-            <div className="flex flex-wrap gap-16 mt-10 ">
+            <div className="flex flex-wrap  items-center justify-center gap-16 mt-10 ">
               {/* ONE */}
               <div>
                 <h1 className="text-xl font-medium mb-4 text-slate-200">
