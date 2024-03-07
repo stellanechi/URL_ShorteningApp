@@ -38,9 +38,9 @@ function Header() {
         {/* HAMBURGER */}
         <div className="md:hidden z-10" onClick={handleClick}>
           {nav ? (
-            <FaTimes className="text-slate-200" size={25} />
+            <FaTimes className="text-slate-200" size={28} />
           ) : (
-            <GiHamburgerMenu className=" text-slate-200 " size={25} />
+            <GiHamburgerMenu className=" text-slate-200 " size={28} />
           )}
           {/*  */}
         </div>
