@@ -16,13 +16,15 @@ function Home() {
             sequence={[
               "Shrtn Your Loooong Links :) ",
               1000,
+              "Easy way to make a link short with lots of advantages ",
+              1000,
               "Optimize your online experience with our ",
               1000,
-              "Advance url shortening solution",
+              "Advance url shortening solution ",
               1000,
             ]}
             wrapper="span"
-            speed={50}
+            speed={30}
             style={{ display: "inline-block", fontSize: "2em" }}
             repeat={Infinity}
             className="text-xl md:text-5xl"
