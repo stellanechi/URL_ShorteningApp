@@ -8,9 +8,9 @@ function Footer() {
     <>
       <footer>
         <div className="bg-gray-900 text-neutral-500 p-20">
-          <div className="flex flex-wrap gap-20 justify-center ">
+          <div className="flex flex-col items-center gap-20 ">
             <div className="mt-10">
-              <div className="flex font-black mb-5">
+              <div className="font-bold mb-5">
                 <h1 className="text-3xl font-black text-slate-200"> Linkly </h1>{" "}
               </div>
               {/* END OF LINKLY */}
