@@ -40,11 +40,12 @@ function Header() {
           {nav ? (
             <FaTimes className="text-slate-200" size={25} />
           ) : (
-            <GiHamburgerMenu className="text-slate-200" size={25} />
+            <GiHamburgerMenu className=" p-4 bg-slate-200 " size={25} />
           )}
           {/*  */}
         </div>
         {/* MOBILE MENU */}
+        {/* text-slate-200 */}
         <ul
           className={`${
             nav
