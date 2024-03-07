@@ -9,9 +9,9 @@ function Header() {
   return (
     <div>
       {" "}
-      <nav className="flex justify-between p-5 items-center  bg-gray-900 fixed top-0 w-full z-50">
+      <nav className="flex justify-between p-6 items-center  bg-gray-900 fixed top-0 w-full z-50">
         <Link
-          className=" text-lg md:text-4xl font-bold bg-gradient-to-r from-pink-500 via-indigo-500 to-pink-500 text-transparent bg-clip-text"
+          className=" text-lg md:text-4xl font-bold md:font-black bg-gradient-to-r from-pink-500 via-indigo-500 to-pink-500 text-transparent bg-clip-text"
           to="/"
         >
           {" "}

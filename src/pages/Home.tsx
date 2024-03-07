@@ -10,7 +10,7 @@ function Home() {
       <article>
         {/* ANIMATION */}
         {/* md:text-base md:font-medium */}
-        <div className="flex items-center justify-center text-xl text-center md:text-3xl px-5 py-5 font-bold mb-4 bg-gradient-to-r from-pink-500 via-indigo-500 to-pink-500 text-transparent bg-clip-text">
+        <div className="flex items-center justify-center text-xl text-center md:text-2xl px-5 py-5 font-bold mb-4 bg-gradient-to-r from-indigo-500 via-pink-500 to-indigo-500 text-transparent bg-clip-text">
           <TypeAnimation
             sequence={[
               "Shrtn Your Loooong Links :) ",
@@ -22,9 +22,9 @@ function Home() {
             ]}
             wrapper="span"
             speed={50}
-            style={{ display: "inline-block" }}
+            style={{ display: "inline-block", fontSize: "2em" }}
             repeat={Infinity}
-            className=""
+            className="text-xl md:text-5xl"
           />
         </div>
         {/* END OF ANIMATION */}
@@ -36,14 +36,13 @@ function Home() {
       </article>
       {/* SHORTEN LINK SECTION */}
       <form className="px-5" action="">
-        <div className="flex justify-center flex-col gap-3 items-center  mb-10 mt-10">
+        <div className="flex justify-center flex-col gap-3 items-center  mb-4 mt-2">
           <label htmlFor=""></label>
           <input
             className="px-4 py-2 placeholder:text-sm md:p-4 font-semibold bg-gray-900 text-slate-200 mt-5 w-full md:w-2/5  rounded-full border-solid border border-slate-200 "
             type="text"
             id="text"
             name="text"
-            value=""
             placeholder="Enter text here.."
           ></input>{" "}
           <button className="p-2 bg-blue-600 rounded-lg px-5 text-slate-200 font-semibold ">
@@ -65,7 +64,7 @@ function Home() {
       </div> */}
 
       {/* TABLE SECTION  TAILWIND CSS STYLING*/}
-      <div className="w-[95%] max-w-5xl mx-auto overflow-x-scroll ">
+      <div className="w-[95%] max-w-6xl mx-auto overflow-x-scroll ">
         <table className="rounded-lg overflow-hidden text-slate-200 border-seperate p-8 border-5 border-solid bg-gray-900 mb-10">
           <tr className="">
             <th className=" bg-gray-700 text-left px-8 py-4">Short Link </th>
