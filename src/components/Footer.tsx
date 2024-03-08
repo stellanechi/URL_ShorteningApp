@@ -54,10 +54,8 @@ function Footer() {
                 </h1>
                 <p>
                   {" "}
-                  Social Media <br />
-                  Digital Marketing <br />
-                  Customer Service <br />
-                  For Developers
+                  Social Media <br /> Digital Marketing <br />
+                  Customer Service <br /> For Developers
                 </p>
               </div>
               {/* THREE */}
