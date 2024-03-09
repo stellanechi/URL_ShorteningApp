@@ -8,6 +8,7 @@ function FAQ() {
           {" "}
           <h1 className="mb-2"> FAQ </h1> <br />
           <p> How does Url shortening work? </p>
+          What can I do with this app
         </div>
       </div>
     </>

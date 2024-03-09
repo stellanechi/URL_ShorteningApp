@@ -6,13 +6,15 @@ import SignUp from "./pages/SignUp.tsx";
 import About from "./pages/About.tsx";
 import Pricing from "./pages/Pricing.tsx";
 import FAQ from "./pages/FAQ.tsx";
+// import { urlShort } from "./context/Context.tsx";
 
 export default function App() {
+  // const { currentuser } = urlShort();
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route path="homepage" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="pricing" element={<Pricing />} />
           <Route path="faq" element={<FAQ />} />

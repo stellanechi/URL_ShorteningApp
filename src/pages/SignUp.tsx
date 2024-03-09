@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { Auth, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase/Firebase";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const signIn = (e) => {
+  const signup = (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
       })
@@ -17,24 +18,24 @@ const SignUp = () => {
   };
   return (
     <div className=" flex items-center justify-center">
-      <div className="bg-white p-15 md:p-10 rounded shadow-md  md:w-1/4 ">
+      <div className="bg-white p-15 md:p-10 rounded shadow-md  md:w-[30%]">
         <h2 className="flex justify-center text-3xl font-black mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
-          Creat Acoount
+          Create Acoount
         </h2>
-        <form onSubmit={signIn}>
-          <div className="mb-4">
+        <form onSubmit={signup}>
+          {/* <div className="mb-4">
             <label htmlFor="password" className="block text-gray-600">
               Enter Name:
             </label>
             <input
-              type="password"
+              type="text"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               id="password"
               name="password"
               className="w-full border border-gray-300 p-2 rounded"
             />
-          </div>
+          </div> */}
 
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-600">
@@ -76,12 +77,12 @@ const SignUp = () => {
               className="w-full border border-gray-300 p-2 rounded"
             />
           </div>
-
           <button
             type="submit"
-            className="px-6 py-2 rounded font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500 ..."
+            onClick={signup}
+            className=" px-6 py-2 w-full rounded font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500"
           >
-            Login
+            Register
           </button>
         </form>
       </div>
