@@ -18,20 +18,20 @@ function Header() {
           LINKLY{" "}
         </Link>
         <ul className="hidden md:flex gap-6 text-slate-200">
-          <li className="font-semibold">
+          <li className="font-semibold hover:text-blue-500">
             {" "}
             <Link to="/about"> About </Link>{" "}
           </li>
-          <li className="font-semibold">
+          <li className="font-semibold hover:text-blue-500">
             <Link to="/faq">FAQ</Link>
           </li>
-          <li className="font-semibold">
+          <li className="font-semibold hover:text-blue-500">
             <Link to="/pricing">Pricing</Link>
           </li>
-          <li className="font-semibold">
+          <li className="font-semibold hover:text-blue-500">
             <Link to="/login">Login</Link>
           </li>
-          <li className="font-semibold border-none p-3 bg-blue-700 rounded-full -mt-3">
+          <li className="font-semibold border-none p-3 bg-blue-700 hover:text-blue-300 rounded-lg -mt-3">
             <Link to="/signup">Signup</Link>
           </li>
         </ul>

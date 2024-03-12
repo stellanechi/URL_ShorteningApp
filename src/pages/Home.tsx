@@ -39,18 +39,18 @@ function Home() {
       </article>
       {/* SHORTEN LINK SECTION */}
       <form className="px-5" action="">
-        <div className="flex justify-center flex-col gap-3 items-center  mb-4 mt-2">
+        <div className="flex justify-center flex-col md:flex-row gap-3 items-center  mb-8 mt-2">
           <label htmlFor=""></label>
           <input
-            className="px-4 py-2 placeholder:text-sm md:placeholder:text-xl md:p-4 font-semibold bg-gray-900 text-slate-200 mt-5 w-full md:w-2/5  rounded-full border-solid border border-slate-200 "
+            className="px-4 py-2 placeholder:text-sm md:placeholder:text-xl md:p-4 font-semibold bg-slate-300 text-gray-500 mt-5 w-full md:w-2/5  rounded-lg border-solid  "
             type="text"
             id="text"
             name="text"
-            placeholder="Enter text here.."
+            placeholder="Enter link here.."
           ></input>{" "}
-          <button className="p-2 bg-blue-600 rounded-lg px-5 text-slate-200 font-semibold ">
+          <button className="px-4 py-2 md:px-5 md:py-3 mt-1  md:mt-4 w-[40%] md:w-[15%] text-sm md:text-xl bg-blue-600 rounded-lg  text-slate-200 font-semibold ">
             {" "}
-            <span>Shorten now </span>
+            <span>Shorten URL</span>
           </button>
         </div>
       </form>

@@ -12,8 +12,8 @@ function About() {
             {" "}
             <h1 className="text-2xl">
               {" "}
-              One Stop. <br /> Four
-              <span className="text-blue-500 "> Possibilities </span> .{" "}
+              One Stop <br /> Four
+              <span className="text-blue-500 "> Possibilities </span>{" "}
             </h1>
           </div>
           <div>
