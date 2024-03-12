@@ -22,6 +22,7 @@ function Pricing() {
           </div>
         </div>
         {/* BOX ONE */}
+
         <div className="flex-wrap md:flex justify-center mt-5 md:mt-14">
           <div className="rounded-lg md:rounded-s-lg pt-5 py-7 px-10 md:px-10 w-[75%] md:w-[22%] border border-blue-500">
             {" "}
@@ -67,6 +68,7 @@ function Pricing() {
               <p className="-mt-1"> Ad-Supported</p>
             </span>
           </div>
+
           {/* BOX-TWO */}
           <div className=" bg-gray-900 text-slate-200 rounded-lg pt-8 py-20 px-10  md:pt-20 md:py-36 md:px-14 w-[85%] md:w-[25%] border-2 ">
             {" "}
@@ -113,6 +115,7 @@ function Pricing() {
             </span>
           </div>
           {/* BOX THREE */}
+
           <div className="rounded-lg md:rounded-s-lg pt-5 py-7 px-10 md:px-10 w-[75%] md:w-[22%] border border-blue-500">
             {" "}
             <p className="text-xl font- font-medium"> Teams </p>
@@ -158,6 +161,7 @@ function Pricing() {
             </span>
           </div>
         </div>
+
         {/* BUTTON */}
         <div className="flex justify-center gap-5 mt-16">
           <button className="border border-blue-700 rounded-full text-blue-700 p-1 w-[55%] md:p-2 md:w-[12%]">

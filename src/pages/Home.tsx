@@ -42,7 +42,7 @@ function Home() {
         <div className="flex justify-center flex-col md:flex-row gap-3 items-center  mb-8 mt-2">
           <label htmlFor=""></label>
           <input
-            className="px-4 py-2 placeholder:text-sm md:placeholder:text-xl md:p-4 font-semibold bg-slate-300 text-gray-500 mt-5 w-full md:w-2/5  rounded-lg border-solid  "
+            className="px-4 py-2 placeholder:text-sm md:placeholder:text-xl md:p-4 font-semibold bg-slate-300 text-gray-500 mt-5 w-full md:w-[37%]  rounded-lg border-solid  "
             type="text"
             id="text"
             name="text"

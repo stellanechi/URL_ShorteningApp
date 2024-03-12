@@ -20,7 +20,7 @@ const Login = () => {
       });
   };
   return (
-    <div className=" flex items-center justify-center">
+    <div className=" flex items-center justify-center py-32">
       <div className="bg-white px-20 py-16  rounded shadow-md  md:w-[30%] ">
         <h2 className="flex justify-center text-3xl font-black mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
           Welcome Back
