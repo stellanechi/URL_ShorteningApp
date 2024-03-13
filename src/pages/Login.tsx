@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/Firebase";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -20,8 +20,8 @@ const Login = () => {
       });
   };
   return (
-    <div className=" flex items-center justify-center py-32">
-      <div className="bg-white px-20 py-16  rounded shadow-md  md:w-[30%] ">
+    <div className=" flex items-center justify-center py-24">
+      <div className="bg-white px-20 py-16  rounded shadow-md  md:w-[34%] ">
         <h2 className="flex justify-center text-3xl font-black mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
           Welcome Back
         </h2>
@@ -61,6 +61,16 @@ const Login = () => {
               Login
             </button>
           </span>
+          <div>
+            <p className="flex justify-center mt-1 ">
+              {" "}
+              Don't have an account?{" "}
+              <Link to="/signup">
+                {" "}
+                <span className="text-blue-500"> &nbsp; Signup</span>{" "}
+              </Link>
+            </p>
+          </div>
         </form>
       </div>
     </div>

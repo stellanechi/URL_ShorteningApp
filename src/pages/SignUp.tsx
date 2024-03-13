@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/Firebase";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -17,8 +18,8 @@ const SignUp = () => {
       });
   };
   return (
-    <div className=" flex items-center justify-center">
-      <div className="bg-white p-15 md:p-10 rounded shadow-md  md:w-[30%]">
+    <div className=" flex items-center justify-center py-24">
+      <div className="bg-white p-15 md:p-10 rounded shadow-md  md:w-[34%]">
         <h2 className="flex justify-center text-3xl font-black mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
           Create Acoount
         </h2>
@@ -84,6 +85,16 @@ const SignUp = () => {
           >
             Register
           </button>
+          <div>
+            <p className="flex justify-center mt-1 ">
+              {" "}
+              Have an account?{" "}
+              <Link to="/login">
+                {" "}
+                <span className="text-blue-500"> &nbsp; Login </span>{" "}
+              </Link>
+            </p>
+          </div>
         </form>
       </div>
     </div>

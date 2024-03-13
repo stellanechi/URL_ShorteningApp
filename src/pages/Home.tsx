@@ -1,10 +1,39 @@
 // import cube from "../assets/cube.svg";
-// import { FaLink } from "react-icons/fa";
-// import { FaLink } from "react-icons/fa6";
+import axios from "axios";
+import { useState } from "react";
 import { IoQrCodeOutline } from "react-icons/io5";
 import { TypeAnimation } from "react-type-animation";
+import QRCode from "react-qr-code";
 
 function Home() {
+  const [originalUrl, setOriginalUrl] = useState("");
+  const [shortenedUrl, setShortenedUrl] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [showQRCode, setShowQRCode] = useState(false);
+
+  const shortenUrl = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        "https://api-ssl.bitly.com/v4/shorten",
+        {
+          long_url: originalUrl,
+        },
+        {
+          headers: {
+            Authorization: "a2a48363cd0e6632cc5aa4454e9505fc84c78e75",
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      setShortenedUrl(response.data.id);
+      setShowQRCode(true);
+    } catch (error) {
+      console.error("Error shortening URL:", error.response.data);
+      setErrorMessage("Error shortening URL. Please try again.");
+    }
+  };
   return (
     <>
       {/* <img src={cube} alt="" /> */}
@@ -47,16 +76,33 @@ function Home() {
             id="text"
             name="text"
             placeholder="Enter link here.."
+            value={originalUrl}
+            onChange={(e) => setOriginalUrl(e.target.value)}
           ></input>{" "}
-          <button className="px-4 py-2 md:px-5 md:py-3 mt-1  md:mt-4 w-[40%] md:w-[15%] text-sm md:text-xl bg-blue-600 rounded-lg  text-slate-200 font-semibold ">
+          <button
+            onClick={shortenUrl}
+            className="px-4 py-2 md:px-5 md:py-3 mt-1  md:mt-4 w-[40%] md:w-[15%] text-sm md:text-xl bg-blue-600 rounded-lg  text-slate-200 font-semibold "
+          >
             {" "}
             <span>Shorten URL</span>
           </button>
+          {/* QRCODE */}
+          {/* <div>
+            {showQRCode ? (
+              <>
+                <p> {originalUrl}</p>
+                <p>
+                  {" "}
+                  <Link to="">Shortened URL: {shortenedUrl}</Link>
+                </p>
+                <QRCode value={shortenedUrl} />
+              </>
+            ) : null}
+            {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+          </div> */}
         </div>
       </form>
-
       {/* END OF SHORTEN LINK FORM */}
-
       {/* <div className="flex justify-center items-center mb-10">
         <button className={HomeCSS.urlbtn}>
           {" "}
@@ -65,10 +111,9 @@ function Home() {
           <button className={HomeCSS.innerbtn}> Shorten now </button>{" "}
         </button>
       </div> */}
-
-      {/* TABLE SECTION  TAILWIND CSS STYLING*/}
-      <div className="w-[95%] max-w-6xl mx-auto overflow-x-scroll ">
-        <table className="rounded-lg overflow-hidden text-slate-200 border-seperate p-8 border-5 border-solid bg-gray-900 mb-10">
+      {/* TABLE SECTION  TAILWIND CSS STYLING */}
+      <div className="w-[100%] md:w-[100%] max-w-6xl mx-auto overflow-x-scroll  ">
+        <table className=" rounded-lg overflow-hidden text-slate-200 border-seperate p-12 border-5 border-solid bg-gray-900 mb-10">
           <tr className="">
             <th className=" bg-gray-700 text-left px-8 py-4">Short Link </th>
             <th className=" bg-gray-700 text-left px-8 py-4">Original Link </th>
@@ -77,6 +122,27 @@ function Home() {
             <th className="bg-gray-700 text-left px-8 py-4">Status</th>
             <th className=" bg-gray-700 text-left px-8 py-4">Date </th>
           </tr>
+
+          <tr>
+            {showQRCode ? (
+              <>
+                <td className="text-left px-8 py-4">{shortenedUrl}</td>
+                <td className="text-left px-8 py-4">{originalUrl}</td>
+                <td className="text-left px-8 py-4">
+                  <QRCode
+                    value={shortenedUrl}
+                    className=" text-slate-200 text-3xl w-[35px] h-6"
+                  />{" "}
+                  {/* <IoQrCodeOutline className=" text-slate-200 text-3xl " /> */}
+                </td>
+                <td className="text-left px-8 py-4"> 4393</td>
+                <td className="text-left px-8 py-4 text-pink-500">inactive </td>
+                <td className="text-left px-8 py-4">02-16-2024</td>
+              </>
+            ) : null}
+            {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+          </tr>
+
           <tr>
             <td className="text-left px-8 py-4">
               https://blog.logrocket.com/building
@@ -92,23 +158,6 @@ function Home() {
             <td className="text-left px-8 py-4 text-emerald-400 ">Active </td>
             <td className="text-left px-8 py-4">02-19-2024</td>
           </tr>
-
-          <tr>
-            <td className="text-left px-8 py-4">
-              https://blog.logrocket.com/building
-            </td>
-            <td className="text-left px-8 py-4">
-              https://blog.logrocket.com/building-tailwind-cs
-            </td>
-            <td className="text-left px-8 py-4">
-              {" "}
-              <IoQrCodeOutline className=" text-slate-200 text-3xl " />
-            </td>
-            <td className="text-left px-8 py-4"> 4393</td>
-            <td className="text-left px-8 py-4 text-pink-500">inactive </td>
-            <td className="text-left px-8 py-4">02-16-2024</td>
-          </tr>
-
           <tr>
             <td className="text-left px-8 py-4">
               https://blog.logrocket.com/building

@@ -20,19 +20,19 @@ function Header() {
         <ul className="hidden md:flex gap-6 text-slate-200">
           <li className="font-semibold hover:text-blue-500 ">
             {" "}
-            <Link to="/about"> About </Link>{" "}
+            <Link to="/about"> ABOUT </Link>{" "}
           </li>
           <li className="font-semibold hover:text-blue-500">
             <Link to="/faq">FAQ</Link>
           </li>
           <li className="font-semibold hover:text-blue-500">
-            <Link to="/pricing">Pricing</Link>
+            <Link to="/pricing">PRICING</Link>
           </li>
           <li className="font-semibold hover:text-blue-500">
-            <Link to="/login">Login</Link>
+            <Link to="/login">LOGIN</Link>
           </li>
           <li className="font-semibold border-none p-2 bg-blue-700 hover:text-blue-300 rounded-lg -mt-1">
-            <Link to="/signup">Signup</Link>
+            <Link to="/signup">REGISTER</Link>
           </li>
         </ul>
         {/* HAMBURGER */}
