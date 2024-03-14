@@ -4,7 +4,7 @@ import { useState } from "react";
 import { IoQrCodeOutline } from "react-icons/io5";
 import { TypeAnimation } from "react-type-animation";
 import QRCode from "react-qr-code";
-import CopyToClipboard from "../components/CopyToClipboard";
+import CopyToClipboard from "../components/Copy";
 import { MdOutlineContentCopy } from "react-icons/md";
 
 function Home() {
