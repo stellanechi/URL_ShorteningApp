@@ -1,12 +1,33 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase/Firebase";
+import { auth, onAuthStateChanged } from "../firebase/Firebase";
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
+
+  // PROTECTED ROUTE
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // set the user..
+        const { displayName, email, photoURL, uid } = user;
+        setUser({ displayName, email, photoURL, uid });
+        setAuthenticated(true);
+        // ...
+      } else {
+        // User is signed out
+        setUser(null);
+        setAuthenticated(false);
+        // ...
+      }
+    });
+  }, []);
+
+  // END OF PROTECTED ROUTE
 
   const signIn = (e) => {
     e.preventDefault();

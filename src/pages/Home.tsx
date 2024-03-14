@@ -1,17 +1,32 @@
 // import cube from "../assets/cube.svg";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoQrCodeOutline } from "react-icons/io5";
 import { TypeAnimation } from "react-type-animation";
 import QRCode from "react-qr-code";
-import CopyToClipboard from "../components/Copy";
+// import CopyToClipboard from "../components/Copy";
 import { MdOutlineContentCopy } from "react-icons/md";
+import { toLocaleDateString, toLocaleTimeString } from "date-fns";
 
 function Home() {
   const [originalUrl, setOriginalUrl] = useState("");
   const [shortenedUrl, setShortenedUrl] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [showQRCode, setShowQRCode] = useState(false);
+  const [date, setDate] = useState(new Date());
+
+  // START OF REAL TIME DATE
+  const formattedDate = toLocaleDateString(date);
+
+  useEffect(() => {
+    const timerId = setInterval(() => {
+      setDate(new Date());
+    }, 1000); // Update every second
+
+    // Cleanup function to clear the interval when the component unmounts
+    return () => clearInterval(timerId);
+  }, []);
+  // END OF REAL TIME DATE
 
   const shortenUrl = async (e) => {
     e.preventDefault();
@@ -105,14 +120,7 @@ function Home() {
         </div>
       </form>
       {/* END OF SHORTEN LINK FORM */}
-      {/* <div className="flex justify-center items-center mb-10">
-        <button className={HomeCSS.urlbtn}>
-          {" "}
-          <FaLink className={HomeCSS.urlicon} />
-          <p className={HomeCSS.urltext}> Enter the link here </p>{" "}
-          <button className={HomeCSS.innerbtn}> Shorten now </button>{" "}
-        </button>
-      </div> */}
+
       {/* TABLE SECTION  TAILWIND CSS STYLING */}
       <div className="w-[100%] md:w-[100%] max-w-6xl mx-auto overflow-x-scroll  ">
         <table className=" rounded-lg overflow-hidden text-slate-200 border-seperate p-12 border-5 border-solid bg-gray-900 mb-10">
@@ -141,7 +149,10 @@ function Home() {
                 </td>
                 <td className="text-left px-8 py-4"> 4393</td>
                 <td className="text-left px-8 py-4 text-pink-500">inactive </td>
-                <td className="text-left px-8 py-4">02-16-2024</td>
+                <td className="text-left px-8 py-4 text-emerald-400">
+                  {" "}
+                  {formattedDate}{" "}
+                </td>
               </>
             ) : null}
             {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
