@@ -4,6 +4,8 @@ import { useState } from "react";
 import { IoQrCodeOutline } from "react-icons/io5";
 import { TypeAnimation } from "react-type-animation";
 import QRCode from "react-qr-code";
+import CopyToClipboard from "../components/CopyToClipboard";
+import { MdOutlineContentCopy } from "react-icons/md";
 
 function Home() {
   const [originalUrl, setOriginalUrl] = useState("");
@@ -126,14 +128,16 @@ function Home() {
           <tr>
             {showQRCode ? (
               <>
-                <td className="text-left px-8 py-4">{shortenedUrl}</td>
+                <td className="flex gap-4 text-left px-8 py-4">
+                  {shortenedUrl}{" "}
+                  <MdOutlineContentCopy className="w-[35px] h-6" />
+                </td>
                 <td className="text-left px-8 py-4">{originalUrl}</td>
                 <td className="text-left px-8 py-4">
                   <QRCode
                     value={shortenedUrl}
                     className=" text-slate-200 text-3xl w-[35px] h-6"
                   />{" "}
-                  {/* <IoQrCodeOutline className=" text-slate-200 text-3xl " /> */}
                 </td>
                 <td className="text-left px-8 py-4"> 4393</td>
                 <td className="text-left px-8 py-4 text-pink-500">inactive </td>
