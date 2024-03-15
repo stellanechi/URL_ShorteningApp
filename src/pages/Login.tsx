@@ -2,30 +2,16 @@ import { useEffect, useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, onAuthStateChanged } from "../firebase/Firebase";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/Context";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
+  const { currentUser } = useAuth();
   const navigate = useNavigate();
 
   // PROTECTED ROUTE
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // set the user..
-        const { displayName, email, photoURL, uid } = user;
-        setUser({ displayName, email, photoURL, uid });
-        setAuthenticated(true);
-        // ...
-      } else {
-        // User is signed out
-        setUser(null);
-        setAuthenticated(false);
-        // ...
-      }
-    });
-  }, []);
 
   // END OF PROTECTED ROUTE
 
@@ -33,13 +19,18 @@ const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        navigate("/homepage");
+        navigate("/");
         console.log(userCredential);
       })
       .catch((error) => {
         console.log(error);
       });
   };
+  useEffect(() => {
+    if (currentUser) {
+      navigate("/");
+    }
+  }, []);
   return (
     <div className=" flex items-center justify-center py-24">
       <div className="bg-white px-20 py-16  rounded shadow-md  md:w-[34%] ">

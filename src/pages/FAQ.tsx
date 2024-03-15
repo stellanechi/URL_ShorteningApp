@@ -39,12 +39,12 @@ const faqData = [
 
 const FAQPage = () => {
   return (
-    <div className=" bg-slate-200 container mx-auto p-8">
+    <div className=" bg-slate-200 container pt-20 mx-auto p-8">
       <h1 className="flex justify-center text-4xl font-bold mb-8">FAQs</h1>
-      <div className="space-y-4 ">
+      <div className="space-y-4  pb-20 ">
         {faqData.map((item, index) => (
           <div key={index} className="flex justify-center border-b pb-4">
-            <div className="flex items-center justify-between w-[40%]">
+            <div className="flex items-center justify-between w-[100%] md:w-[42%]">
               <div className="font-normal">{item.question}</div>
               <button className=" focus:outline-none">
                 <FaPlus />

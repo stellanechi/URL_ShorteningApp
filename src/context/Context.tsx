@@ -1,35 +1,54 @@
-import { onAuthStateChanged } from "firebase/auth";
+import { User, onAuthStateChanged } from "firebase/auth";
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../firebase/Firebase";
 
-const UrlContext = createContext();
+type AuthContextValue = {
+  currentUser: User | null;
+  setCurrentUser: React.Dispatch<React.SetStateAction<User | null>>;
+  loading: boolean;
+};
 
-function Context(children) {
-  const [currentuser, SetCurrentUser] = useState(false);
+const AuthContext = createContext<AuthContextValue | undefined>(undefined);
+
+function UserContext({ children }: { children: React.ReactNode }) {
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const subscribe = onAuthStateChanged(auth, (user) => {
+      setLoading(true);
       if (user) {
-        SetCurrentUser(user);
+        setCurrentUser(user);
       } else {
-        SetCurrentUser(false);
+        setCurrentUser(null);
       }
+      setLoading(false);
     });
 
     return () => subscribe();
-  }, [currentuser]);
+  }, [currentUser]);
 
   return (
-    <UrlContext.Provider
+    <AuthContext.Provider
       value={{
-        currentuser,
-        SetCurrentUser,
+        currentUser,
+        setCurrentUser,
+        loading,
       }}
     >
       {children}
-    </UrlContext.Provider>
+    </AuthContext.Provider>
   );
 }
 
-export default Context;
+export default UserContext;
 
-export const urlShort = () => useContext(UrlContext);
+export const useAuth = (): AuthContextValue => {
+  const authContext = useContext(AuthContext);
+
+  if (!authContext) {
+    throw new Error("useAuth must be used within an AuthProvider");
+  }
+
+  return authContext;
+};

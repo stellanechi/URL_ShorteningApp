@@ -1,22 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/Firebase";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/Context";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { currentUser } = useAuth();
+  const navigate = useNavigate();
 
   const signup = (e) => {
     e.preventDefault();
+
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
       });
   };
+  useEffect(() => {
+    if (currentUser) {
+      navigate("/");
+    }
+  }, []);
   return (
     <div className=" flex items-center justify-center py-24">
       <div className="bg-white p-15 md:p-10 rounded shadow-md  md:w-[34%]">

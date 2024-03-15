@@ -1,33 +1,31 @@
 // import cube from "../assets/cube.svg";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import react, { useState, useEffect } from "react";
 import { IoQrCodeOutline } from "react-icons/io5";
 import { TypeAnimation } from "react-type-animation";
 import QRCode from "react-qr-code";
 // import CopyToClipboard from "../components/Copy";
 import { MdOutlineContentCopy } from "react-icons/md";
-import { toLocaleDateString, toLocaleTimeString } from "date-fns";
+// import { toLocalString } from "date-fns";
 
 function Home() {
   const [originalUrl, setOriginalUrl] = useState("");
   const [shortenedUrl, setShortenedUrl] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [showQRCode, setShowQRCode] = useState(false);
-  const [date, setDate] = useState(new Date());
+  const [currentDate, setCurrentDate] = useState(new Date()); // DATE
 
   // START OF REAL TIME DATE
-  const formattedDate = toLocaleDateString(date);
 
   useEffect(() => {
-    const timerId = setInterval(() => {
-      setDate(new Date());
+    const intervalId = setInterval(() => {
+      setCurrentDate(new Date());
     }, 1000); // Update every second
 
-    // Cleanup function to clear the interval when the component unmounts
-    return () => clearInterval(timerId);
+    return () => clearInterval(intervalId); // Cleanup
   }, []);
   // END OF REAL TIME DATE
-
+  // START OF URL SHORTENING LOGIC
   const shortenUrl = async (e) => {
     e.preventDefault();
     try {
@@ -51,12 +49,11 @@ function Home() {
       setErrorMessage("Error shortening URL. Please try again.");
     }
   };
+  // END OF URL SHORTENING LOGIC
   return (
     <>
-      {/* <img src={cube} alt="" /> */}
       <article>
         {/* ANIMATION */}
-        {/* md:text-base md:font-medium */}
         <div className="flex items-center justify-center text-lg text-center md:text-2xl px-5 py-5 font-bold mb-4 bg-gradient-to-r from-indigo-500 via-pink-500 to-indigo-500 text-transparent bg-clip-text">
           <TypeAnimation
             sequence={[
@@ -122,7 +119,7 @@ function Home() {
       {/* END OF SHORTEN LINK FORM */}
 
       {/* TABLE SECTION  TAILWIND CSS STYLING */}
-      <div className="w-[100%] md:w-[100%] max-w-6xl mx-auto overflow-x-scroll  ">
+      <div className="w-[100%] md:w-[100%] max-w-7xl mx-auto overflow-x-scroll  ">
         <table className=" rounded-lg overflow-hidden text-slate-200 border-seperate p-12 border-5 border-solid bg-gray-900 mb-10">
           <tr className="">
             <th className=" bg-gray-700 text-left px-8 py-4">Short Link </th>
@@ -140,7 +137,7 @@ function Home() {
                   {shortenedUrl}{" "}
                   <MdOutlineContentCopy className="w-[35px] h-6" />
                 </td>
-                <td className="text-left px-8 py-4">{originalUrl}</td>
+                <td className="text-left px-8 py-4 "> {originalUrl}</td>
                 <td className="text-left px-8 py-4">
                   <QRCode
                     value={shortenedUrl}
@@ -149,9 +146,9 @@ function Home() {
                 </td>
                 <td className="text-left px-8 py-4"> 4393</td>
                 <td className="text-left px-8 py-4 text-pink-500">inactive </td>
-                <td className="text-left px-8 py-4 text-emerald-400">
+                <td className="text-left px-8 py-4">
                   {" "}
-                  {formattedDate}{" "}
+                  {currentDate.toDateString()}{" "}
                 </td>
               </>
             ) : null}
@@ -171,7 +168,7 @@ function Home() {
             </td>
             <td className="text-left px-8 py-4"> 1313</td>
             <td className="text-left px-8 py-4 text-emerald-400 ">Active </td>
-            <td className="text-left px-8 py-4">02-19-2024</td>
+            <td className="text-left px-8 py-4">Tue Mar 12 2024</td>
           </tr>
           <tr>
             <td className="text-left px-8 py-4">
@@ -186,7 +183,7 @@ function Home() {
             </td>
             <td className="text-left px-8 py-4"> 1313</td>
             <td className="text-left px-8 py-4 text-emerald-400 ">Active </td>
-            <td className="text-left px-8 py-4">02-19-2024</td>
+            <td className="text-left px-8 py-4">Sun Mar 10 2024</td>
           </tr>
         </table>
       </div>

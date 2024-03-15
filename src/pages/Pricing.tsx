@@ -23,8 +23,8 @@ function Pricing() {
         </div>
         {/* BOX ONE */}
 
-        <div className="flex-wrap md:flex justify-center mt-5 md:mt-14">
-          <div className="rounded-lg md:rounded-s-lg pt-5 py-7 px-10 md:px-10 w-[75%] md:w-[22%] border border-blue-500">
+        <div className="flex-wrap items-center px-10  md:flex justify-center mt-5 md:mt-14">
+          <div className="rounded-lg md:rounded-s-lg mb-5 pt-5 py-7 px-10 md:px-10 w-[100%] md:w-[22%] border border-blue-500">
             {" "}
             <p className="text-xl font-medium"> Basic </p>
             <h1 className="mt-5 md:mt-8 mb-3 font-bold text-2xl md:text-3xl">
@@ -70,7 +70,7 @@ function Pricing() {
           </div>
 
           {/* BOX-TWO */}
-          <div className=" bg-gray-900 text-slate-200 rounded-lg pt-8 py-20 px-10  md:pt-20 md:py-36 md:px-14 w-[85%] md:w-[25%] border-2 ">
+          <div className=" bg-gray-900 text-slate-200 rounded-lg mb-5 pt-8 py-20 px-10  md:pt-20 md:py-36 md:px-14 w-[100%] md:w-[25%] border-2 ">
             {" "}
             <p className="text-xl font-semibold"> Professional </p>
             <h1 className="mt-5 md:mt-8 mb-3 font-bold text-2xl md:text-4xl">
@@ -116,7 +116,7 @@ function Pricing() {
           </div>
           {/* BOX THREE */}
 
-          <div className="rounded-lg md:rounded-s-lg pt-5 py-7 px-10 md:px-10 w-[75%] md:w-[22%] border border-blue-500">
+          <div className="rounded-lg md:rounded-s-lg pt-5 py-7 px-10 md:px-10 w-[100%] md:w-[22%] border border-blue-500">
             {" "}
             <p className="text-xl font- font-medium"> Teams </p>
             <h1 className="mt-5 md:mt-8 mb-3 font-bold text-2xl md:text-3xl">
@@ -163,12 +163,12 @@ function Pricing() {
         </div>
 
         {/* BUTTON */}
-        <div className="flex justify-center gap-5 mt-16">
-          <button className="border border-blue-700 rounded-full text-blue-700 p-1 w-[55%] md:p-2 md:w-[12%]">
+        <div className="flex md:flex-row justify-center item-center gap-3 md:gap-5 mt-16 pb-20">
+          <button className="border border-blue-700 rounded-full text-blue-700 p-1 w-[40%] md:p-2 md:w-[12%]">
             {" "}
-            Get Custom Pricing{" "}
+            Custom Pricing{" "}
           </button>
-          <button className="rounded-full bg-blue-700 text-slate-200 p-1 w-[55%] md:p-2 md:w-[12%]">
+          <button className="rounded-full bg-blue-700 text-slate-200 p-1 w-[40%] md:p-2 md:w-[12%]">
             {" "}
             Select Pricing{" "}
           </button>

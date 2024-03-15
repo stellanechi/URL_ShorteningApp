@@ -53,7 +53,7 @@ function About() {
         <article>
           <div>
             <div className="flex flex-col md:flex-row place-content-around ">
-              <div>
+              <div className=" p-5">
                 <h1 className="text-2xl mb-4">
                   <strong>
                     {" "}
@@ -76,7 +76,7 @@ function About() {
               </div>
               {/* URL SHORTENING */}
               <div className="flex flex-wrap gap-10">
-                <div>
+                <div className="p-5">
                   {" "}
                   <FaLink className=" text-blue-500 text-xl mb-6 " />
                   <h1 className="text-xl mb-4">
@@ -91,7 +91,7 @@ function About() {
                   </p>
                 </div>
                 {/* CUSTOM URL */}
-                <div>
+                <div className="p-5">
                   {" "}
                   <FaRegPenToSquare className=" text-blue-500 text-xl mb-6 " />
                   <h1 className="text-xl mb-4">
@@ -107,9 +107,9 @@ function About() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-end mt-14 gap-10 mr-20  p-10">
+            <div className="flex  flex-wrap justify-end mt-14 gap-10 mr-20 p-5 md:p-10 pb-20">
               {/* QR CODE */}
-              <div>
+              <div className="w-100%">
                 <IoQrCodeOutline className=" text-blue-500 text-xl  mb-6" />
                 <h1 className="text-xl mb-4">
                   {" "}
@@ -123,7 +123,7 @@ function About() {
                 </p>
               </div>
               {/* DATA ANALYTICS */}
-              <div>
+              <div className="">
                 <SiAlwaysdata className=" text-blue-500 text-xl mb-6 " />
                 <h1 className="text-xl mb-4">
                   {" "}
