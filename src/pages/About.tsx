@@ -7,7 +7,7 @@ function About() {
   return (
     <>
       <div className="bg-slate-200">
-        <div className="   flex  w-100  h-32 bg-gray-900 mb-20  text-slate-200 p-5  tracking-tight place-content-around font-semibold">
+        <div className="   flex  flex-col sm:flex-row w-100  gap-10 md:gap-0 text-center bg-gray-900 mb-20  text-slate-200 p-5  tracking-tight place-content-around font-semibold">
           <div>
             {" "}
             <h1 className="text-2xl">
@@ -107,7 +107,7 @@ function About() {
                 </div>
               </div>
             </div>
-            <div className="flex  flex-wrap justify-end mt-14 gap-10 mr-20 p-5 md:p-10 pb-20">
+            <div className="flex  flex-wrap justify-end mt-14 gap-10 mr-28 p-5 md:p-10 pb-20">
               {/* QR CODE */}
               <div className="w-100%">
                 <IoQrCodeOutline className=" text-blue-500 text-xl  mb-6" />

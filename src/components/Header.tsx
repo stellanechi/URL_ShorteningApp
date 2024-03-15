@@ -2,10 +2,26 @@ import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/Context";
+import { auth } from "../firebase/Firebase";
+import { signOut } from "firebase/auth";
 
 function Header() {
   const [nav, SetNav] = useState(false);
   const handleClick = () => SetNav(!nav);
+  const { currentUser } = useAuth(); // SIGNOUT
+
+  //  SIGNOUT
+
+  const logOut = async () => {
+    try {
+      await signOut(auth);
+      console.log("signOut");
+    } catch (error) {
+      console.log("error");
+    }
+  };
+  // END OF SIGNOUT
   return (
     <div>
       {" "}
@@ -28,13 +44,27 @@ function Header() {
           <li className="font-semibold hover:text-blue-500">
             <Link to="/pricing">PRICING</Link>
           </li>
-          <li className="font-semibold hover:text-blue-500">
-            <Link to="/login">LOGIN</Link>
-          </li>
-          <li className="font-semibold border-none p-2 bg-blue-700 hover:text-blue-300 rounded-lg -mt-1">
-            <Link to="/signup">REGISTER</Link>
-          </li>
         </ul>
+        {/* START OF SIGNOUT BUTTON */}
+        {!currentUser ? (
+          <>
+            {" "}
+            <li className=" hidden sm:block font-semibold border-none p-2 bg-blue-700 hover:text-blue-300 rounded-lg -mt-1">
+              <Link to="/login">LOGIN</Link>
+            </li>
+            <li className="hidden sm:block font-semibold border-none p-2 bg-blue-700 hover:text-blue-300 rounded-lg -mt-1">
+              <Link to="/signup">REGISTER</Link>
+            </li>{" "}
+          </>
+        ) : (
+          <p
+            onClick={logOut}
+            className="font-semibold border-none p-2 bg-slate-200 hover:text-blue-300 rounded-lg -mt-1 text-red-400"
+          >
+            SIGNOUT
+          </p>
+        )}
+
         {/* HAMBURGER */}
         <div className="md:hidden z-10" onClick={handleClick}>
           {nav ? (
