@@ -46,14 +46,15 @@ function Header() {
           </li>
         </ul>
         {/* START OF SIGNOUT BUTTON */}
+
         {!currentUser ? (
           <>
             {" "}
-            <li className=" hidden sm:block font-semibold border-none p-2 bg-blue-700 hover:text-blue-300 rounded-lg -mt-1">
+            <li className=" hidden sm:block font-semibold border-none p-2 bg-pink-500 hover:text-blue-300 rounded-lg -mt-1">
               <Link to="/login">LOGIN</Link>
             </li>
             <li className="hidden sm:block font-semibold border-none p-2 bg-blue-700 hover:text-blue-300 rounded-lg -mt-1">
-              <Link to="/signup">REGISTER</Link>
+              <Link to="/signup">SIGNUP</Link>
             </li>{" "}
           </>
         ) : (
@@ -64,6 +65,7 @@ function Header() {
             SIGNOUT
           </p>
         )}
+        {/* END OF SIGNOUT BUTTONS */}
 
         {/* HAMBURGER */}
         <div className="md:hidden z-10" onClick={handleClick}>

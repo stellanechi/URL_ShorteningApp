@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/Firebase";
 import { Link, useNavigate } from "react-router-dom";
@@ -28,8 +28,8 @@ const SignUp = () => {
     }
   }, []);
   return (
-    <div className=" flex items-center justify-center py-24">
-      <div className="bg-white p-15 md:p-10 rounded shadow-md  md:w-[34%]">
+    <div className=" flex items-center justify-center py-24 px-10">
+      <div className="bg-white px-10 py-14 md:p-10 rounded shadow-md  w-full md:w-[34%]">
         <h2 className="flex justify-center text-3xl font-black mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
           Create Acoount
         </h2>

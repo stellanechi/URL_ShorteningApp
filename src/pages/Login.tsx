@@ -32,8 +32,8 @@ const Login = () => {
     }
   }, []);
   return (
-    <div className=" flex items-center justify-center py-24">
-      <div className="bg-white px-20 py-16  rounded shadow-md  md:w-[34%] ">
+    <div className=" flex items-center justify-center py-24 px-10">
+      <div className="bg-white px-10  md:px-20 py-16  rounded shadow-md w-full md:w-[34%] ">
         <h2 className="flex justify-center text-3xl font-black mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
           Welcome Back
         </h2>
