@@ -1,6 +1,6 @@
 // import cube from "../assets/cube.svg";
 import axios from "axios";
-import react, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { IoQrCodeOutline } from "react-icons/io5";
 import { TypeAnimation } from "react-type-animation";
 import QRCode from "react-qr-code";
