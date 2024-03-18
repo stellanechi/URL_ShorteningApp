@@ -54,7 +54,7 @@ function Home() {
     <>
       <article>
         {/* ANIMATION */}
-        <div className="flex items-center justify-center text-lg text-center md:text-2xl px-5 py-5 font-bold mb-4 bg-gradient-to-r from-indigo-500 via-pink-500 to-indigo-500 text-transparent bg-clip-text">
+        <div className="flex items-center justify-center text-lg text-center md:text-2xl px-5 pt-20 font-bold mb-4 bg-gradient-to-r from-indigo-500 via-pink-500 to-indigo-500 text-transparent bg-clip-text">
           <TypeAnimation
             sequence={[
               "Shrtn Your Loooong Links :) ",

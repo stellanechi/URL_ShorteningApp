@@ -1,22 +1,22 @@
 // import React from "react";
+// import { FaPlus } from "react-icons/fa6";
 import Question from "../components/Question";
 
 const FAQPage = () => {
   return (
-    <div className="bg-slate-200">
-      <div className="max-w-2xl mx-auto mt-8 px-4 ">
-        <h1 className="text-2xl font-semibold mb-4">
-          Frequently Asked Questions
-        </h1>
+    <div className=" bg-slate-200 pt-20 mx-auto p-8">
+      <div className="  mx-auto mt-8 px-4 ">
+        <h1 className="flex justify-center text-4xl font-bold mb-8">FAQs</h1>
         <Question
-          question="What is Tailwind CSS?"
-          answer="Tailwind CSS is a utility-first CSS framework that allows you to build custom designs without having to leave your HTML."
+          question="How does URL shortning work?"
+          answer="URL shortening works by taking a long URL and creating a shorter, condensed version that redirects to the  original URL. When a user clicks on the shortened link, they are redirected to the intended destination."
         />
+
         <Question
-          question="How do I install Tailwind CSS?"
-          answer="You can install Tailwind CSS via npm or yarn by running npm install tailwindcss or yarn add tailwindcss."
+          question="How do I change a long URL to a short URL?"
+          answer="To shorten a URL, you'll need a service like RB.GY. First, copy the long URL you want to shorten. Then, access the URL shortener tool. Paste your long URL into the appropriate field, then click Shorten URL. RB.GY will instantly generate a shortened version of your original URL, which leads to the same page when clicked."
         />
-        {/* Add more questions here */}
+        <Question question="" answer="" />
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../context/Context";
 import { auth } from "../firebase/Firebase";
 import { signOut } from "firebase/auth";
+import { PiSignOutBold } from "react-icons/pi";
 
 function Header() {
   const [nav, SetNav] = useState(false);
@@ -33,7 +34,7 @@ function Header() {
           {" "}
           LINKLY{" "}
         </Link>
-        <ul className="hidden md:flex gap-6 text-slate-200">
+        <ul className="hidden md:flex gap-6 text-slate-200 text-lg">
           <li className="font-semibold hover:text-blue-500 ">
             {" "}
             <Link to="/about"> ABOUT </Link>{" "}
@@ -50,20 +51,22 @@ function Header() {
         {!currentUser ? (
           <>
             {" "}
-            <li className=" hidden sm:block font-semibold border-none p-2 bg-pink-500 hover:text-blue-300 rounded-lg -mt-1">
+            <li className=" hidden sm:block font-semibold border-none p-2 bg-pink-500 hover:text-blue-300 rounded-lg -mt-1 text-lg">
               <Link to="/login">LOGIN</Link>
             </li>
-            <li className="hidden sm:block font-semibold border-none p-2 bg-blue-700 hover:text-blue-300 rounded-lg -mt-1">
+            <li className="hidden sm:block font-semibold border-none p-2 bg-blue-700 hover:text-blue-300 rounded-lg -mt-1 text-lg">
               <Link to="/signup">SIGNUP</Link>
             </li>{" "}
           </>
         ) : (
-          <p
-            onClick={logOut}
-            className="font-semibold border-none p-2 bg-slate-200 hover:text-blue-300 rounded-lg -mt-1 text-red-400"
-          >
-            SIGNOUT
-          </p>
+          <span className="flex gap-2 font-semibold border-none p-2 px-2 bg-slate-200 hover:text-blue-300 rounded-lg -mt-1 text-red-400">
+            {" "}
+            <p onClick={logOut}>LOGOUT </p>{" "}
+            <span>
+              {" "}
+              <PiSignOutBold className="mt-1" />
+            </span>
+          </span>
         )}
         {/* END OF SIGNOUT BUTTONS */}
 
