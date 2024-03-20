@@ -139,13 +139,13 @@ function Home() {
                   <MdOutlineContentCopy className="w-[35px] h-6" />
                 </td>
                 <td className="text-left px-8 py-4 "> {originalUrl}</td>
-                <td className="text-left px-8 py-4">
+                <td className="text-left">
                   <QRCode
                     value={shortenedUrl}
-                    className=" text-slate-200 text-3xl w-[35px] h-6"
+                    className=" text-slate-200 text-3xl w-[20%] "
                   />{" "}
                 </td>
-                <td className="text-left px-8 py-4"> 4393</td>
+                <td className="text-left px-8 py-4"> 4</td>
                 <td className="text-left px-8 py-4 text-emerald-400">
                   Active{" "}
                 </td>

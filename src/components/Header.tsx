@@ -62,9 +62,9 @@ function Header() {
           <div className="flex  gap-3">
             {" "}
             {/* CURRENT USER IMAGE AND DISPLAY NAME */}
-            <li className="flex items-start gap-2">
+            <li className="hidden  md:flex items-start gap-2">
               {" "}
-              <span className="text-lg font-semibold">
+              <span className="text-lg font-semibold text-blue-400">
                 {" "}
                 {currentUser.displayName}
               </span>{" "}
@@ -75,7 +75,7 @@ function Header() {
               />{" "}
               {/* END OF CURRENT USER IMAGE AND DISPLAY NAME */}
             </li>
-            <div className="flex gap-2 font-semibold border-none p-2 px-2 bg-slate-200 hover:text-blue-300 rounded-lg -mt-1 text-red-400">
+            <div className="hidden md:flex  gap-2 font-semibold text-blue-400 border-blue-600 p-2 px-2 bg-slate-200 hover:text-blue-300 rounded-lg -mt-1 ">
               <p onClick={logOut}>LOGOUT </p>{" "}
               <span>
                 {" "}
@@ -116,6 +116,9 @@ function Header() {
           <li className="p-2 hover:text-blue-500">
             <Link to="/pricing">Pricing</Link>
           </li>
+
+          {/* START OF LOGOUT LOGIC */}
+
           <li className="p-2 hover:text-blue-500">
             <Link to="/login">Login</Link>
           </li>
