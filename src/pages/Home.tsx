@@ -6,6 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 import QRCode from "react-qr-code";
 // import CopyToClipboard from "../components/Copy";
 import { MdOutlineContentCopy } from "react-icons/md";
+import { Link } from "react-router-dom";
 // import { toLocalString } from "date-fns";
 
 function Home() {
@@ -16,7 +17,6 @@ function Home() {
   const [currentDate, setCurrentDate] = useState(new Date()); // DATE
 
   // START OF REAL TIME DATE
-
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentDate(new Date());
@@ -36,7 +36,7 @@ function Home() {
         },
         {
           headers: {
-            Authorization: "a2a48363cd0e6632cc5aa4454e9505fc84c78e75",
+            Authorization: "37f00163763548490c08f21f868cfba0e7de6325",
             "Content-Type": "application/json",
           },
         }
@@ -114,6 +114,7 @@ function Home() {
             ) : null}
             {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
           </div> */}
+          {/*  COMMENTED OUT */}
         </div>
       </form>
       {/* END OF SHORTEN LINK FORM */}
@@ -145,7 +146,9 @@ function Home() {
                   />{" "}
                 </td>
                 <td className="text-left px-8 py-4"> 4393</td>
-                <td className="text-left px-8 py-4 text-pink-500">inactive </td>
+                <td className="text-left px-8 py-4 text-emerald-400">
+                  Active{" "}
+                </td>
                 <td className="text-left px-8 py-4">
                   {" "}
                   {currentDate.toDateString()}{" "}
@@ -167,7 +170,7 @@ function Home() {
               <IoQrCodeOutline className=" text-slate -200 text-3xl " />
             </td>
             <td className="text-left px-8 py-4"> 1313</td>
-            <td className="text-left px-8 py-4 text-emerald-400 ">Active </td>
+            <td className="text-left px-8 py-4 text-pink-500 ">Inactive </td>
             <td className="text-left px-8 py-4">Tue Mar 12 2024</td>
           </tr>
           <tr>

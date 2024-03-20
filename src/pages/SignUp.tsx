@@ -1,26 +1,51 @@
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/Firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/Context";
+import { signUp } from "../firebase/signUp";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [name, setName] = useState("");
+  const [loading, setLoading] = useState(false);
   const { currentUser } = useAuth();
   const navigate = useNavigate();
 
-  const signup = (e) => {
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = {
+      name,
+      email,
+      password,
+    };
+    if (password !== confirmPassword) {
+      toast("password and confirm password does not match");
+      return;
+    }
+    if (password.length < 6) {
+      toast("password must be atleast six characters");
+      return;
+    }
+    setLoading(true);
+    const response = await signUp(formData);
+    if (!response?.error) {
+      setLoading(false);
+      navigate("/");
+    }
+    setLoading(false);
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log(userCredential);
-        navigate("/");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    // createUserWithEmailAndPassword(auth, email, password)
+    //   .then((userCredential) => {
+    //     console.log(userCredential);
+    //     navigate("/");
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
   };
   useEffect(() => {
     if (currentUser) {
@@ -33,7 +58,7 @@ const SignUp = () => {
         <h2 className="flex justify-center text-3xl font-black mb-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
           Create Acoount
         </h2>
-        <form onSubmit={signup}>
+        <form onSubmit={onSubmit}>
           {/* <div className="mb-4">
             <label htmlFor="password" className="block text-gray-600">
               Enter Name:
@@ -47,6 +72,19 @@ const SignUp = () => {
               className="w-full border border-gray-300 p-2 rounded"
             />
           </div> */}
+          <div className="mb-4">
+            <label htmlFor="name" className="block text-gray-600">
+              Name:
+            </label>
+            <input
+              type="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              id="name"
+              name="name"
+              className="w-full border border-gray-300 p-2 rounded"
+            />
+          </div>
 
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-600">
@@ -67,6 +105,8 @@ const SignUp = () => {
             </label>
             <input
               type="password"
+              required
+              minLength={6}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               id="password"
@@ -76,24 +116,23 @@ const SignUp = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="password" className="block text-gray-600">
+            <label htmlFor="confirmPassword" className="block text-gray-600">
               Confirm Password:
             </label>
             <input
               type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              id="password"
-              name="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              id="confirmPassword"
+              name="confirmPassword"
               className="w-full border border-gray-300 p-2 rounded"
             />
           </div>
           <button
             type="submit"
-            onClick={signup}
             className=" px-6 py-2 w-full rounded font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:to-purple-500"
           >
-            Register
+            {loading ? "Registering..." : "Register"}
           </button>
           <div>
             <p className="flex justify-center mt-1 ">

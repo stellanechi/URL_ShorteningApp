@@ -34,7 +34,7 @@ function Header() {
           {" "}
           LINKLY{" "}
         </Link>
-        <ul className="hidden md:flex gap-6 text-slate-200 text-lg">
+        <ul className="hidden md:flex item-center gap-6 text-slate-200 text-lg">
           <li className="font-semibold hover:text-blue-500 ">
             {" "}
             <Link to="/about"> ABOUT </Link>{" "}
@@ -59,14 +59,30 @@ function Header() {
             </li>{" "}
           </>
         ) : (
-          <span className="flex gap-2 font-semibold border-none p-2 px-2 bg-slate-200 hover:text-blue-300 rounded-lg -mt-1 text-red-400">
+          <div className="flex  gap-3">
             {" "}
-            <p onClick={logOut}>LOGOUT </p>{" "}
-            <span>
+            {/* CURRENT USER IMAGE AND DISPLAY NAME */}
+            <li className="flex items-start gap-2">
               {" "}
-              <PiSignOutBold className="mt-1" />
-            </span>
-          </span>
+              <span className="text-lg font-semibold">
+                {" "}
+                {currentUser.displayName}
+              </span>{" "}
+              <img
+                src={currentUser.photoURL!}
+                className="w-10 h-10 rounded-full object-cover"
+                alt=""
+              />{" "}
+              {/* END OF CURRENT USER IMAGE AND DISPLAY NAME */}
+            </li>
+            <div className="flex gap-2 font-semibold border-none p-2 px-2 bg-slate-200 hover:text-blue-300 rounded-lg -mt-1 text-red-400">
+              <p onClick={logOut}>LOGOUT </p>{" "}
+              <span>
+                {" "}
+                <PiSignOutBold className="mt-1" />
+              </span>
+            </div>
+          </div>
         )}
         {/* END OF SIGNOUT BUTTONS */}
 
