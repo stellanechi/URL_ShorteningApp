@@ -1,6 +1,6 @@
 import { FormEvent, useEffect, useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase/Firebase";
+// import { createUserWithEmailAndPassword } from "firebase/auth";
+// import { auth } from "../firebase/Firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/Context";
 import { signUp } from "../firebase/signUp";

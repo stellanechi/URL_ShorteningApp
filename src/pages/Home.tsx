@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 import QRCode from "react-qr-code";
 // import CopyToClipboard from "../components/Copy";
 import { MdOutlineContentCopy } from "react-icons/md";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import { toLocalString } from "date-fns";
 
 function Home() {
