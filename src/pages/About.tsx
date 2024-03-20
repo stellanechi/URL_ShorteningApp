@@ -6,7 +6,7 @@ import { SiAlwaysdata } from "react-icons/si";
 function About() {
   return (
     <>
-      <div className="bg-slate-200">
+      <div className="bg-slate-200 pt-20">
         <div className="   flex  flex-col sm:flex-row w-100  gap-10 md:gap-0 text-center bg-gray-900 mb-20  text-slate-200 p-5  tracking-tight place-content-around font-semibold">
           <div>
             {" "}

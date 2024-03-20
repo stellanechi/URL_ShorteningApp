@@ -14,7 +14,7 @@ const Question = ({ question, answer }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex justify-between w-[100%] md:text-lg md:w-[50%] p-1 px-4 bg-slate-300 rounded">
-          {question} <IoIosArrowDropdownCircle />
+          {question} <IoIosArrowDropdownCircle className="text-2xl" />
         </div>
       </button>
       {isOpen && (

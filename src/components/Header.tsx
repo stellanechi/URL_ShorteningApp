@@ -50,13 +50,15 @@ function Header() {
 
         {!currentUser ? (
           <>
-            {" "}
-            <li className=" hidden sm:block font-semibold border-none p-2 bg-pink-500 hover:text-blue-300 rounded-lg -mt-1 text-lg">
-              <Link to="/login">LOGIN</Link>
-            </li>
-            <li className="hidden sm:block font-semibold border-none p-2 bg-blue-700 hover:text-blue-300 rounded-lg -mt-1 text-lg">
-              <Link to="/signup">SIGNUP</Link>
-            </li>{" "}
+            <div className="flex gap-3">
+              {" "}
+              <li className=" hidden sm:block font-semibold border-2 text-pink-700 border-pink-500 p-2 bg-slate-200 hover:text-pink-300 rounded-lg -mt-1 text-lg">
+                <Link to="/login">Login</Link>
+              </li>
+              <li className="hidden sm:block font-semibold border-2 p-2 text-blue-700 border-blue-700 bg-slate-200 hover:text-blue-300 rounded-lg -mt-1 text-lg">
+                <Link to="/signup">Signup for free </Link>
+              </li>{" "}
+            </div>
           </>
         ) : (
           <div className="flex  gap-3">
