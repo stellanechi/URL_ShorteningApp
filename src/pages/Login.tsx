@@ -16,7 +16,7 @@ const Login = () => {
 
   // END OF PROTECTED ROUTE
 
-  const signIn = (e) => {
+  const signIn = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
