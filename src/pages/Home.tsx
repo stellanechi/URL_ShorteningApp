@@ -26,7 +26,7 @@ function Home() {
   }, []);
   // END OF REAL TIME DATE
   // START OF URL SHORTENING LOGIC
-  const shortenUrl = async (e) => {
+  const shortenUrl = async (e: React.MouseEvent<HTMLButtonElement>) => {
     //: React.ChangeEvent<HTMLInputElement>
     e.preventDefault();
     try {
