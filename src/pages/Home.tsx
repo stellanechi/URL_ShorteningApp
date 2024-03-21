@@ -45,23 +45,20 @@ function Home() {
 
       setShortenedUrl(response.data.id);
       setShowQRCode(true);
+      // } catch (error) {
+      //   console.error("Error shortening URL:", error.response.data);
+      //   setErrorMessage("Error shortening URL. Please try again.");
+      // }
+      // ERROR TRIAL
     } catch (error) {
-      console.error("Error shortening URL:", error.response.data);
-      setErrorMessage("Error shortening URL. Please try again.");
+      if (axios.isAxiosError(error)) {
+        console.error("Error shortening URL:", error.response?.data);
+        setErrorMessage("Error shortening URL. Please try again.");
+      } else {
+        console.error("Unknown error occurred:", error);
+        setErrorMessage("Unknown error occurred. Please try again.");
+      }
     }
-    // ERROR TRIAL
-    // } catch (error) {
-    //   if (typeof error === "string") {
-    //     console.error("Error shortening URL:", error);
-    //     setErrorMessage("Error shortening URL. Please try again.");
-    //   } else if (error.response && error.response.data) {
-    //     console.error("Error shortening URL:", error!.response.data);
-    //     setErrorMessage("Error shortening URL. Please try again.");
-    //   } else {
-    //     console.error("Unknown error occurred:", error);
-    //     setErrorMessage("Unknown error occurred. Please try again.");
-    //   }
-    // }
     // END OF ERROR TRIAL
   };
   // END OF URL SHORTENING LOGIC
