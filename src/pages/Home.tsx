@@ -26,7 +26,8 @@ function Home() {
   }, []);
   // END OF REAL TIME DATE
   // START OF URL SHORTENING LOGIC
-  const shortenUrl = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const shortenUrl = async (e) => {
+    //: React.ChangeEvent<HTMLInputElement>
     e.preventDefault();
     try {
       const response = await axios.post(
