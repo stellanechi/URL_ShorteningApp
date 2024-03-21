@@ -26,7 +26,7 @@ function Home() {
   }, []);
   // END OF REAL TIME DATE
   // START OF URL SHORTENING LOGIC
-  const shortenUrl = async (e) => {
+  const shortenUrl = async (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     try {
       const response = await axios.post(
@@ -45,6 +45,7 @@ function Home() {
       setShortenedUrl(response.data.id);
       setShowQRCode(true);
     } catch (error) {
+      // } catch (typeof error === 'string') {
       console.error("Error shortening URL:", error.response.data);
       setErrorMessage("Error shortening URL. Please try again.");
     }
