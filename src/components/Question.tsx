@@ -4,7 +4,12 @@ import { useState } from "react";
 // import { FaPlus } from "react-icons/fa6";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 
-const Question = ({ question, answer }) => {
+interface QuestionProps {
+  question: string;
+  answer: string;
+}
+
+const Question: React.FC<QuestionProps> = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
