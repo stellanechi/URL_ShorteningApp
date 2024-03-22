@@ -37,7 +37,7 @@ function Home() {
 
   const [originalUrl, setOriginalUrl] = useState("");
   // const [shortenedUrl, setShortenedUrl] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage] = useState(""); //setErrorMessage
   // const [showQRCode, setShowQRCode] = useState(false);
   // const [currentDate, setCurrentDate] = useState(new Date()); // DATE
   const [tableData, setTableData] = useState<TableUrl[]>([]);
@@ -55,6 +55,7 @@ function Home() {
   //   return () => clearInterval(intervalId); // Cleanup
   // }, []);
   // END OF REAL TIME DATE
+  console.log(loading);
 
   useEffect(() => {
     const getUrls = async () => {
