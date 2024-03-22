@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 // import { IoQrCodeOutline } from "react-icons/io5";
 import { TypeAnimation } from "react-type-animation";
-import QRCode from "react-qr-code";
+// import QRCode from "react-qr-code"; // QRCODE
 // import CopyToClipboard from "../components/Copy";
 import { MdOutlineContentCopy } from "react-icons/md";
 import { toast } from "react-toastify";
@@ -15,13 +15,12 @@ import {
   FieldValue,
   addDoc,
   collection,
-  doc,
   getDocs,
   query,
   serverTimestamp,
-  setDoc,
   where,
-} from "firebase/firestore";
+} from "firebase/firestore"; //doc,  setDoc,
+
 import { db } from "../firebase/Firebase";
 import { getAuth } from "firebase/auth";
 
@@ -37,31 +36,25 @@ function Home() {
   // const { currentUser } = useAuth(); // FIRESTORE
 
   const [originalUrl, setOriginalUrl] = useState("");
-  const [shortenedUrl, setShortenedUrl] = useState("");
+  // const [shortenedUrl, setShortenedUrl] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [showQRCode, setShowQRCode] = useState(false);
-  const [currentDate, setCurrentDate] = useState(new Date()); // DATE
+  // const [showQRCode, setShowQRCode] = useState(false);
+  // const [currentDate, setCurrentDate] = useState(new Date()); // DATE
   const [tableData, setTableData] = useState<TableUrl[]>([]);
   const [loading, setLoading] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-
   const { currentUser } = getAuth();
   const linksCollection = collection(db, "links");
 
-  // SAVING URL TO DATABASE FIRESTORE
-  // const handleSave = async () => {
-  //   const shortenRef = doc(db, "users", currentUser.uid, "savedurldata");
-  // };
-  // END OF SAVING TO DATABASE FIRESTORE
-
   // START OF REAL TIME DATE
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentDate(new Date());
-    }, 1000); // Update every second
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setCurrentDate(new Date());
+  //   }, 1000); // Update every second
 
-    return () => clearInterval(intervalId); // Cleanup
-  }, []);
+  //   return () => clearInterval(intervalId); // Cleanup
+  // }, []);
+  // END OF REAL TIME DATE
 
   useEffect(() => {
     const getUrls = async () => {
