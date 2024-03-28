@@ -255,7 +255,7 @@ function Home() {
       {/* END OF SHORTEN LINK FORM */}
 
       {/* TABLE SECTION  TAILWIND CSS STYLING  max-w-7xl */}
-      <div className="w-[100%] md:w-[100%] max-w-7xl mx-auto overflow-x-scroll  ">
+      <div className="w-[100%] md:w-[100%] max-w-[90%] mx-auto overflow-x-scroll  ">
         <table className=" w-full rounded-lg overflow-hidden text-slate-200 border-seperate p-12 border-5 border-solid bg-gray-900 mb-10">
           <thead>
             <tr className="">
@@ -284,7 +284,7 @@ function Home() {
                           {/* w-[100%] min-w-0 */} {tData.originalUrl}
                         </td>
                         {/* QRCODE */}
-                        <td className="text-left">
+                        <td className=" ">
                           {/* <div className="mx-auto max-w-[64px] w-full"> */}
                           <QRCode
                             className="hover:scale-150 duration-1000 w-[12%]"
