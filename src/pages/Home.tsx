@@ -287,7 +287,7 @@ function Home() {
                         <td className=" ">
                           {/* <div className="mx-auto max-w-[64px] w-full"> */}
                           <QRCode
-                            className="hover:scale-150 duration-1000 w-[12%]"
+                            className="hover:scale-[3] duration-1000 w-[12%]"
                             // size={256}
                             viewBox={`0 0 256 256`}
                             value={tData.shortUrl}
