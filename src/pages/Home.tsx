@@ -56,6 +56,7 @@ function Home() {
   // }, []);
   // END OF REAL TIME DATE
   console.log(loading);
+  console.log(setCurrentDate);
 
   useEffect(() => {
     const getUrls = async () => {
