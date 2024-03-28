@@ -24,7 +24,7 @@ function Pricing() {
         {/* BOX ONE */}
 
         <div className="flex-wrap items-center px-10  md:flex justify-center mt-5 md:mt-14">
-          <div className="rounded-lg md:rounded-s-lg mb-5 pt-5 py-7 px-10 md:px-10 w-[100%] md:w-[22%] border border-blue-500">
+          <div className="hover:scale-110 duration-1000 bg-slate-300 rounded-lg md:rounded-s-lg mb-5 pt-5 py-7 px-10 md:px-10 w-[100%] md:w-[22%] border border-blue-500">
             {" "}
             <p className="text-xl font-medium"> Basic </p>
             <h1 className="mt-5 md:mt-8 mb-3 font-bold text-2xl md:text-3xl">
@@ -70,7 +70,7 @@ function Pricing() {
           </div>
 
           {/* BOX-TWO */}
-          <div className=" bg-gray-900 text-slate-200 rounded-lg mb-5 pt-8 py-20 px-10  md:pt-20 md:py-36 md:px-14 w-[100%] md:w-[25%] border-2 ">
+          <div className="hover:scale-110 duration-1000 bg-gray-900 text-slate-200 rounded-lg mb-5 pt-8 py-20 px-10  md:pt-20 md:py-36 md:px-14 w-[100%] md:w-[25%] border-2 ">
             {" "}
             <p className="text-xl font-semibold"> Professional </p>
             <h1 className="mt-5 md:mt-8 mb-3 font-bold text-2xl md:text-4xl">
@@ -116,7 +116,7 @@ function Pricing() {
           </div>
           {/* BOX THREE */}
 
-          <div className="rounded-lg md:rounded-s-lg pt-5 py-7 px-10 md:px-10 w-[100%] md:w-[22%] border border-blue-500">
+          <div className="hover:scale-110 duration-1000 bg-slate-300 rounded-lg md:rounded-s-lg pt-5 py-7 px-10 md:px-10 w-[100%] md:w-[22%] border border-blue-500">
             {" "}
             <p className="text-xl font- font-medium"> Teams </p>
             <h1 className="mt-5 md:mt-8 mb-3 font-bold text-2xl md:text-3xl">

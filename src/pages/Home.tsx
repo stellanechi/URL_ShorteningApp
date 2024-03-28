@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 // import { IoQrCodeOutline } from "react-icons/io5";
 import { TypeAnimation } from "react-type-animation";
-// import QRCode from "react-qr-code"; // QRCODE
+import QRCode from "react-qr-code"; // QRCODE
 // import CopyToClipboard from "../components/Copy";
 import { MdOutlineContentCopy } from "react-icons/md";
 import { toast } from "react-toastify";
@@ -39,7 +39,7 @@ function Home() {
   // const [shortenedUrl, setShortenedUrl] = useState("");
   const [errorMessage] = useState(""); //setErrorMessage
   // const [showQRCode, setShowQRCode] = useState(false);
-  // const [currentDate, setCurrentDate] = useState(new Date()); // DATE
+  const [currentDate, setCurrentDate] = useState(new Date()); // DATE
   const [tableData, setTableData] = useState<TableUrl[]>([]);
   const [loading, setLoading] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -85,8 +85,6 @@ function Home() {
     };
     getUrls();
   }, []);
-
-  // END OF REAL TIME DATE
 
   // START OF URL SHORTENING LOGIC
   const shortenUrl = async (longLink: string) => {
@@ -181,9 +179,6 @@ function Home() {
     }
   };
   // END OF SHORTENING LOGIC
-
-  // };
-
   return (
     <>
       <article>
@@ -258,7 +253,7 @@ function Home() {
       </form>
       {/* END OF SHORTEN LINK FORM */}
 
-      {/* TABLE SECTION  TAILWIND CSS STYLING */}
+      {/* TABLE SECTION  TAILWIND CSS STYLING  max-w-7xl */}
       <div className="w-[100%] md:w-[100%] max-w-7xl mx-auto overflow-x-scroll  ">
         <table className=" w-full rounded-lg overflow-hidden text-slate-200 border-seperate p-12 border-5 border-solid bg-gray-900 mb-10">
           <thead>
@@ -280,28 +275,33 @@ function Home() {
                   return (
                     <tr key={tData.urlId}>
                       <>
-                        <td className="flex gap-4 text-left px-3 py-2">
+                        <td className="flex gap-4 text-left px-2 py-4">
                           {tData.shortUrl}
                           <MdOutlineContentCopy className="w-[35px] h-6" />
                         </td>
-
-                        <td className="text-left px-3 py-2 whitespace-nowrap w-[100%] min-w-0 ">
-                          {" "}
-                          {tData.originalUrl}
+                        <td className="text-left px-2 py-2 whitespace-nowrap  ">
+                          {/* w-[100%] min-w-0 */} {tData.originalUrl}
                         </td>
+                        {/* QRCODE */}
                         <td className="text-left">
-                          {/* <QRCode
+                          {/* <div className="mx-auto max-w-[64px] w-full"> */}
+                          <QRCode
+                            className="hover:scale-150 duration-1000 w-[12%]"
+                            // size={256}
+                            viewBox={`0 0 256 256`}
                             value={tData.shortUrl}
-                            className=" text-slate-200 text-3xl"
-                          />{" "} */}
+                            // className=" text-slate-200 text-3xl"
+                          />{" "}
+                          {/* </div> */}
                         </td>
-                        <td className="text-left px-3 py-2"> 4</td>
-                        <td className="text-left px-3 py-2 text-emerald-400">
+                        {/* END OF QRCODE */}
+                        <td className="text-left px-3 py-4"> 4</td>
+                        <td className="text-left px-3 py-4 text-emerald-400">
                           Active{" "}
                         </td>
-                        <td className="text-left px-8 py-4">
+                        <td className="text-left px-2 py-3">
                           {" "}
-                          {/* {currentDate.toDateString()}{" "} */}
+                          {currentDate.toDateString()}{" "}
                         </td>
                       </>
                     </tr>
@@ -318,6 +318,11 @@ function Home() {
 export default Home;
 
 {
+  // QRCODE
+  /* <QRCode
+                            value={tData.shortUrl}
+                            className=" text-slate-200 text-3xl"
+                          />{" "} */
   /* <tr>
               <td className="text-left px-8 py-4">
                 https://blog.logrocket.com/building
